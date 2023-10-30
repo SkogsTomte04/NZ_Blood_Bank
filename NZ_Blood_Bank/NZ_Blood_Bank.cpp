@@ -2,9 +2,13 @@
 //
 
 #include <iostream>
+#include "Donor_Reg.h"
 
 int main()
 {
+    while (true) {
+        Register();
+    }
     
 }
 
