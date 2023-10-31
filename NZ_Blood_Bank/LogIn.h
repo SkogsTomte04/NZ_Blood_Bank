@@ -41,11 +41,12 @@ string LogIn(){
 
 	
 	if (FindUsername(Doc, username)) {
+		Doc[username]["isActive"] = true;
 		return username;
 	}
 	else {
 		return "exe.fail";
 	}
 	
-	//return "yippeeee";
+	cout << "gobedu";
 }
