@@ -12,7 +12,24 @@
         "Password": "Jumbu321",
         "Prev_Donation_Date": "060714",
         "Username": "AswellDude",
-        "dob": "040420"
+        "dob": "040420",
+        "isActive": false
+    },
+    "JORDSTER": {
+        "Adress": "Loser town",
+        "Blood_Group": "H-",
+        "Contact_no": "934572830",
+        "Email": "Jordie@gmail.com",
+        "Ethnicity": "White",
+        "First_Name": "Jordie",
+        "Last_Name": "Reid",
+        "Med_Conditions": "Sweaty",
+        "Nationality": "South Africa",
+        "Password": "DogBone321",
+        "Prev_Donation_Date": "982734",
+        "Username": "JORDSTER",
+        "dob": "Idono_man",
+        "isActive": false
     },
     "Miltonios": {
         "Adress": "Freak Street !",
@@ -27,6 +44,23 @@
         "Password": "YutoLover123",
         "Prev_Donation_Date": "094563",
         "Username": "Miltonios",
-        "dob": "271104"
+        "dob": "271104",
+        "isActive": false
+    },
+    "yb46yb": {
+        "Adress": "e56g365v3",
+        "Blood_Group": "6yhb56",
+        "Contact_no": "gbe",
+        "Email": "g",
+        "Ethnicity": "6yb4",
+        "First_Name": "4yb",
+        "Last_Name": "4yb",
+        "Med_Conditions": "6yb4",
+        "Nationality": "yb4y6b4",
+        "Password": "5gv356",
+        "Prev_Donation_Date": "56g3",
+        "Username": "yb46yb",
+        "dob": "46",
+        "isActive": false
     }
 }
