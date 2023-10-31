@@ -3,12 +3,11 @@
 
 #include <iostream>
 #include "Donor_Reg.h"
+#include "LogIn.h"
 
 int main()
 {
-    while (true) {
-        Register();
-    }
+    cout << LogIn();
     
 }
 
