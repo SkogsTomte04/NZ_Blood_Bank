@@ -48,5 +48,5 @@ string LogIn(){
 		return "exe.fail";
 	}
 	
-	cout << "gobedu";
+
 }
