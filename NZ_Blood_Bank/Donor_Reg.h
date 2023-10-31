@@ -18,8 +18,8 @@ void Register() {
 	string userInput, username;
 	cout << "Enter a Username: ";
 	getline(cin, username);
-
 	Doc[username];
+	Doc[username]["isActive"] = false;
 	Doc[username]["Username"] = username;
 	
 	for (int i = 0; i < size(FileArray); i++) {
