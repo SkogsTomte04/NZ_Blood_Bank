@@ -129,12 +129,6 @@
   <ItemGroup>
     <ClCompile Include="NZ_Blood_Bank.cpp" />
   </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="Donor_Reg.h" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="user_data.json" />
-  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>
