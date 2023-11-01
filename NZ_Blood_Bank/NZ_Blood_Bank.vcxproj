@@ -132,6 +132,7 @@
   <ItemGroup>
     <ClInclude Include="Donor_Reg.h" />
     <ClInclude Include="LogIn.h" />
+    <ClInclude Include="TempStartMenu.h" />
   </ItemGroup>
   <ItemGroup>
     <None Include="user_data.json" />

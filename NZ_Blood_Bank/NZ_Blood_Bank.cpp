@@ -4,30 +4,14 @@
 #include <iostream>
 #include "Donor_Reg.h"
 #include "LogIn.h"
+#include "TempStartMenu.h"
 
-void start(bool &loggedIn, string &user) {
-    int userinput;
-
-    cout << "1. Log In\n2. Sign up" << endl;
-    cin >> userinput;
-
-    if (userinput == 1) {
-        string status = LogIn();
-        if (status != "exe.fail") {
-            user = status;
-            loggedIn = true;
-        }
-        
-    }
-    if (userinput == 2) {
-        Register();
-    }
-}
 
 int main()
 {
     bool isLoggedin = false;
     string activeUser;
+
     while (!isLoggedin) {
         start(isLoggedin, activeUser);
     }
