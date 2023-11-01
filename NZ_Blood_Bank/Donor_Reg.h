@@ -7,7 +7,7 @@
 using json = nlohmann::json;
 using namespace std;
 
-string FileArray[12] = { "First_Name", "Last_Name", "dob", "Nationality", "Ethnicity", "Med_Conditions", "Blood_Group", "Contact_no", "Email", "Adress", "Prev_Donation_Date", "Password" };
+string FileArray[12] = { "First_Name", "Last_Name", "dob", "Nationality", "Ethnicity", "Med_Conditions", "Blood_Group", "Contact_no", "Email", "Adress", "Prev_Donation_Date", "Password"};
 
 
 void Register() {
@@ -21,6 +21,7 @@ void Register() {
 	Doc[username];
 	Doc[username]["isActive"] = false;
 	Doc[username]["Username"] = username;
+	Doc[username]["Appointment_Date"] = { 0, 0, 0 };
 	
 	for (int i = 0; i < size(FileArray); i++) {
 		cout << FileArray[i] << ": ";
