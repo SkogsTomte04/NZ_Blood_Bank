@@ -1,9 +1,11 @@
 #pragma once
 #include <iostream>
 #include <fstream>
+#include <string>
 #include "json.hpp"
 using json = nlohmann::json;
 using namespace std;
+
 
 bool PasswordCheck(json j, string str) {
 	string password;
@@ -15,9 +17,9 @@ bool PasswordCheck(json j, string str) {
 	else { return false; }
 }
 
-bool FindUsername(json j,string usr) {
+bool FindUsername(json j, string usr) {
 	if (j.contains(usr)) {
-		
+
 		if (PasswordCheck(j, usr)) {
 			return true;
 		}
@@ -36,24 +38,28 @@ bool FindUsername(json j,string usr) {
 	}
 }
 
-string LogIn(){
+string LogIn() {
 	system("cls");
-	
+
 	ifstream in("user_data.json");
 	json Doc = json::parse(in);
-	
+
 	string username;
 	cout << "UserName: ";
-	
+
 	cin >> username;
-	
+
 	if (FindUsername(Doc, username)) {
 		Doc[username]["isActive"] = true;
+		fstream file;
+		file.open("user_data.json", std::ios::out);
+		file << std::setw(4) << Doc;
+		file.close();
 		return username;
 	}
 	else {
 		return "exe.fail";
 	}
-	
+
 
 }
