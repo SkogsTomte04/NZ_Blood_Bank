@@ -127,9 +127,11 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Booking.cpp" />
     <ClCompile Include="NZ_Blood_Bank.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Booking.h" />
     <ClInclude Include="Donor_Reg.h" />
     <ClInclude Include="LogIn.h" />
     <ClInclude Include="TempStartMenu.h" />
