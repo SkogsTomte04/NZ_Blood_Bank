@@ -1,5 +1,5 @@
 {
-    "AswellDude": {
+    "AswellDude": { //pay no mind to the contents of this json, i was bored :^|
         "Adress": "Sunset Road 244",
         "Blood_Group": "B+",
         "Contact_no": "0732306558",
@@ -71,8 +71,8 @@
     "t": {
         "Adress": "t",
         "Appointment_Date": {
-            "Hour": 10,
-            "day": "Monday"
+            "Hour": 13,
+            "day": "Tuesday"
         },
         "Blood_Group": "t",
         "Contact_no": "t",
@@ -87,6 +87,27 @@
         "Username": "t",
         "dob": "t",
         "isActive": true
+    },
+    "y": {
+        "Appointment_Date": {
+            "Hour": 0,
+            "day": "n/a"
+        },
+        "User_Info": {
+            "Adress": "y",
+            "Blood_Group": "y",
+            "Contact_no": "y",
+            "Email": "y",
+            "Ethnicity": "y",
+            "First_Name": "y",
+            "Last_Name": "y",
+            "Med_Conditions": "y",
+            "Nationality": "y",
+            "Password": "y",
+            "Prev_Donation_Date": "y",
+            "dob": "y"
+        },
+        "isActive": false
     },
     "yb46yb": {
         "Adress": "e56g365v3",

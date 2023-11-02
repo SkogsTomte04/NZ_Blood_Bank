@@ -4,8 +4,7 @@
 #include <string>
 #include <array>
 #include "json.hpp"
-//using json = nlohmann::json;
-//using namespace std;
+
 
 int getHour();
 

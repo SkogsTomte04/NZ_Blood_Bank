@@ -21,6 +21,15 @@
     <ClCompile Include="Booking.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="TempStartMenu.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Login.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Donor_Reg.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Donor_Reg.h">

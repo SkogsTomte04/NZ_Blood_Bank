@@ -10,7 +10,7 @@ int getHour() { // user picks time of day
 	iota(hours.begin(), hours.end(), 9);
 
 	for (int i = 1; i <= size(hours); i++) {
-		cout << i << ". " << hours[i - 1] << endl;
+		cout << i << ". " << hours[i - 1] << ":00" << endl;
 	}
 	cout << "Pick a time of day (1 - " << size(hours) << "): ";
 	cin >> userinput;
@@ -33,9 +33,10 @@ string getDay() { // user picks day
 }
 
 void BookAppointment(string user) { // Gives user object both day of and time of appointment
+	system("cls");
+
 	ifstream in("user_data.json");
 	json Doc = json::parse(in);
-	string day = getDay();
 
 	Doc[user]["Appointment_Date"]["day"] = getDay();
 	Doc[user]["Appointment_Date"]["Hour"] = getHour();
