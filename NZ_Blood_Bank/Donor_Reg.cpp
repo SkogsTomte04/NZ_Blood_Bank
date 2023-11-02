@@ -18,11 +18,11 @@ void Register() {
 	system("cls");
 
 	ifstream in("user_data.json");
-	json Doc = json::parse(in);
+	json Doc = json::parse(in); //creates a json object 
 
 	string username = getUsername();
 
-	Doc[username];
+	Doc[username]; // new user initialization
 
 	Doc[username]["isActive"] = false;
 	Doc[username]["Appointment_Date"] = { {"day", "n/a"} , {"Hour", 0} };
@@ -38,7 +38,7 @@ void Register() {
 		Doc[username]["User_Info"][FileArray[i]] = userInput;
 	}
 	fstream file;
-	file.open("user_data.json", std::ios::out);
-	file << std::setw(4) << Doc;
-	file.close();
+	file.open("user_data.json", std::ios::out); // opens json file
+	file << std::setw(4) << Doc; // inserts changes into json file
+	file.close(); // close json file
 }
