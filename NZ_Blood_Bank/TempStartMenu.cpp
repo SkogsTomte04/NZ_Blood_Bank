@@ -7,7 +7,7 @@ extern string LogIn();
 
 void start(bool& loggedIn, string& user) {
 
-    while (!loggedIn) {
+    while (!loggedIn) { // does this if user is not logged in
         system("cls");
         
         int userinput;
@@ -31,7 +31,7 @@ void start(bool& loggedIn, string& user) {
         }
     }
 
-    while (loggedIn) {
+    while (loggedIn) { // does this if user is logged in
         system("cls");
         int userinput;
         cout << "1. Book appointment\n2. Log out" << endl;
