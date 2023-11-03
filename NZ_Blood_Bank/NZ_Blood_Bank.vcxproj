@@ -140,6 +140,7 @@
     <ClInclude Include="TempStartMenu.h" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Schedule.json" />
     <None Include="user_data.json" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

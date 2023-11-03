@@ -1,16 +1,18 @@
 #include "Booking.h"
 
-using json = nlohmann::json;
+using json = nlohmann::ordered_json;
 using namespace std;
 
 string weekdays[5] = { "Monday", "Tuesday", "Wednesday", "Thursday", "Friday" };
 int hours[8] = { 9, 10, 11, 12, 13, 14, 15, 16 };
 
 void inSchedule(string day, int hour, string user) {
+	string hour_key = to_string(hour);
+
 	ifstream in("Schedule.json");
 	json j = json::parse(in);
 
-	j[day][hour] = user;
+	j["Days"][day][hour_key] = user;
 
 	fstream file;
 	file.open("Schedule.json", std::ios::out);
@@ -59,10 +61,11 @@ void BookAppointment(string user) { // Gives user object both day of and time of
 	Doc[user]["Appointment_Date"]["day"] = day;
 	Doc[user]["Appointment_Date"]["Hour"] = hour;
 
-	inSchedule(day, hour, user);
+	
 
 	fstream file;
 	file.open("user_data.json", std::ios::out);
 	file << std::setw(4) << Doc;
 	file.close();
+	inSchedule(day, hour, user);
 }

@@ -100,8 +100,8 @@
     },
     "a": {
         "Appointment_Date": {
-            "Hour": 0,
-            "day": "n/a"
+            "Hour": 11,
+            "day": "Wednesday"
         },
         "User_Info": {
             "Adress": "a",
