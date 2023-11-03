@@ -5,9 +5,11 @@
 #include <array>
 #include "json.hpp"
 
-void inSchedule(std::string, int, std::string);
+nlohmann::ordered_json getSchedulejson();
 
-int getHour();
+void inSchedule(std::string, int, std::string, nlohmann::json);
+
+int getHour(nlohmann::json, std::string);
 
 std::string getDay();
 

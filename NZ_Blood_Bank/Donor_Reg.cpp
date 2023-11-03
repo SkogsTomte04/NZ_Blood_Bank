@@ -1,6 +1,6 @@
 #include "Donor_Reg.h"
 
-using json = nlohmann::json;
+using json = nlohmann::ordered_json;
 using namespace std;
 
 string FileArray[12] = { "First_Name", "Last_Name", 
@@ -27,8 +27,6 @@ void Register() {
 
 	Doc[username]; // new user initialization
 
-	Doc[username]["Appointment_Date"] = { {"day", "n/a"} , {"Hour", 0} };
-
 	for (int i = 0; i < size(FileArray); i++) {
 		string userInput;
 
@@ -39,6 +37,9 @@ void Register() {
 		}
 		Doc[username]["User_Info"][FileArray[i]] = userInput;
 	}
+	
+	Doc[username]["Appointment_Date"] = { {"day", "n/a"} , {"Hour", 0} };
+
 	fstream file;
 	file.open("user_data.json", std::ios::out); // opens json file
 	file << std::setw(4) << Doc; // inserts changes into json file
