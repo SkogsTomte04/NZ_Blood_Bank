@@ -131,6 +131,8 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\..\..\OneDrive - UP Education\Desktop\colors.hpp" />
+    <ClInclude Include="recipient_screen.h" />
+    <ClInclude Include="intro_screen.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
