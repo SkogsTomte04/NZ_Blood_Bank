@@ -5,9 +5,10 @@
 #include <array>
 #include "json.hpp"
 
+void inSchedule(std::string, int, std::string);
 
 int getHour();
 
 std::string getDay();
 
-void BookAppointment(std::string user);
+void BookAppointment(std::string);

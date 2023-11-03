@@ -3,7 +3,10 @@
 using json = nlohmann::json;
 using namespace std;
 
-string FileArray[12] = { "First_Name", "Last_Name", "dob", "Nationality", "Ethnicity", "Med_Conditions", "Blood_Group", "Contact_no", "Email", "Adress", "Prev_Donation_Date", "Password" };
+string FileArray[12] = { "First_Name", "Last_Name", 
+"dob", "Nationality", "Ethnicity", "Med_Conditions", 
+"Blood_Group", "Contact_no", "Email", "Adress", 
+"Prev_Donation_Date", "Password" };
 
 
 string getUsername() {
@@ -24,7 +27,6 @@ void Register() {
 
 	Doc[username]; // new user initialization
 
-	Doc[username]["isActive"] = false;
 	Doc[username]["Appointment_Date"] = { {"day", "n/a"} , {"Hour", 0} };
 
 	for (int i = 0; i < size(FileArray); i++) {

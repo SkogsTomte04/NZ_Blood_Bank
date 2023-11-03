@@ -1,6 +1,36 @@
 {
+    "A": {
+        "Appointment_Date": [
+            [
+                "day",
+                "n/a"
+            ],
+            [
+                "Hour"
+            ]
+        ],
+        "User_Info": {
+            "Adress": "a",
+            "Blood_Group": "a",
+            "Contact_no": "a",
+            "Email": "a",
+            "Ethnicity": "a",
+            "First_Name": "a",
+            "Last_Name": "a",
+            "Med_Conditions": "a",
+            "Nationality": "a",
+            "Password": "a",
+            "Prev_Donation_Date": "a",
+            "dob": "a"
+        },
+        "isActive": false
+    },
     "AswellDude": {
         "Adress": "Sunset Road 244",
+        "Appointment_Date": {
+            "Hour": 11,
+            "day": "Monday"
+        },
         "Blood_Group": "B+",
         "Contact_no": "0732306558",
         "Email": "williammoller321@gmail.com",
@@ -13,7 +43,7 @@
         "Prev_Donation_Date": "060714",
         "Username": "AswellDude",
         "dob": "040420",
-        "isActive": false
+        "isActive": true
     },
     "FreddyFazber": {
         "Appointment_Date": {
@@ -68,6 +98,27 @@
         "dob": "271104",
         "isActive": false
     },
+    "a": {
+        "Appointment_Date": {
+            "Hour": 0,
+            "day": "n/a"
+        },
+        "User_Info": {
+            "Adress": "a",
+            "Blood_Group": "a",
+            "Contact_no": "a",
+            "Email": "a",
+            "Ethnicity": "a",
+            "First_Name": "a",
+            "Last_Name": "a",
+            "Med_Conditions": "a",
+            "Nationality": "a",
+            "Password": "a",
+            "Prev_Donation_Date": "a",
+            "dob": "a"
+        },
+        "isActive": false
+    },
     "t": {
         "Adress": "t",
         "Appointment_Date": {
@@ -86,6 +137,27 @@
         "Prev_Donation_Date": "t",
         "Username": "t",
         "dob": "t",
+        "isActive": true
+    },
+    "testuser": {
+        "Appointment_Date": {
+            "Hour": 0,
+            "day": "n/a"
+        },
+        "User_Info": {
+            "Adress": "ag",
+            "Blood_Group": "ser",
+            "Contact_no": "gerg",
+            "Email": "es",
+            "Ethnicity": "er",
+            "First_Name": "ge",
+            "Last_Name": "ge",
+            "Med_Conditions": "ge",
+            "Nationality": "sg",
+            "Password": "BlaBla",
+            "Prev_Donation_Date": "erh",
+            "dob": "gsg"
+        },
         "isActive": true
     },
     "y": {

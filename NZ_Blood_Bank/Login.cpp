@@ -8,7 +8,7 @@ bool PasswordCheck(json j, string str) {
 	string password;
 	cout << "Password: ";
 	cin >> password;
-	if (j[str]["Password"] == password) {
+	if (j[str]["User_Info"]["Password"] == password) {
 		return true;
 	}
 	else { return false; }
@@ -47,7 +47,6 @@ string LogIn() {
 	cin >> username;
 
 	if (FindUsername(Doc, username)) {
-		Doc[username]["isActive"] = true;
 		fstream file;
 		file.open("user_data.json", std::ios::out);
 		file << std::setw(4) << Doc;
