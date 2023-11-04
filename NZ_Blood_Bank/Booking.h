@@ -6,9 +6,9 @@
 #include <vector>
 #include "json.hpp"
 
-nlohmann::ordered_json getSchedulejson();
+nlohmann::json NewDate(nlohmann::json, std::string, std::string, std::string);
 
-void inSchedule(std::string, int, std::string, nlohmann::json);
+nlohmann::json updateUserdate(nlohmann::json, std::string, std::string, std::string);
 
 int getHour(nlohmann::json, std::string);
 
