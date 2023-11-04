@@ -6,11 +6,7 @@ using namespace std;
 string weekdays[5] = { "Monday", "Tuesday", "Wednesday", "Thursday", "Friday" };
 vector<int> hours = { 9, 10, 11, 12, 13, 14, 15, 16 };
 
-json getSchedulejson() {
-	ifstream in("Schedule.json");
-	json j = json::parse(in);
-	return j;
-}
+
 
 vector<int> getAvailableHours(json j, string day) {
 	vector<int> Available_H;
@@ -66,22 +62,22 @@ string getDay() { // user picks day
 void BookAppointment(string user) { // Gives user object both day of and time of appointment
 	system("cls");
 
-	json j_Schedule = getSchedulejson();
-
-	ifstream in("user_data.json");
-	json Doc = json::parse(in);
+	ifstream readUserdata("user_data.json");
+	ifstream readSchedule("Schedule.json");
+	json j_Userdata = json::parse(readUserdata);
+	json j_Schedule = json::parse(readSchedule);
 
 	string day = getDay();
 	int hour = getHour(j_Schedule, day);
 
-	Doc[user]["Appointment_Date"]["day"] = day;
-	Doc[user]["Appointment_Date"]["Hour"] = hour;
+	j_Userdata[user]["Appointment_Date"]["day"] = day;
+	j_Userdata[user]["Appointment_Date"]["Hour"] = hour;
 
 	
 
 	fstream file;
 	file.open("user_data.json", std::ios::out);
-	file << std::setw(4) << Doc;
+	file << std::setw(4) << j_Userdata;
 	file.close();
 	inSchedule(day, hour, user, j_Schedule);
 }

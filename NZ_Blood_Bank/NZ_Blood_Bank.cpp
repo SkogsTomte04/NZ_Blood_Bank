@@ -38,7 +38,7 @@ int main()
             int userinput;
             cout << "1. Book appointment\n2. Log out" << endl;
             cin >> userinput;
-            if (userinput == 1) {
+            if (userinput == 1) { // PLEASE add a check to see if user already has a booked date
                 BookAppointment(activeUser);
             }
             if (userinput == 2) {

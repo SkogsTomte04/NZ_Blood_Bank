@@ -2,10 +2,10 @@
     "Days": {
         "Monday": {
             "9": "ASwellDude",
-            "10": "Available",
-            "11": "Available",
-            "12": "Available",
-            "13": "Available",
+            "10": "1",
+            "11": "1",
+            "12": "1",
+            "13": "ASwellDude",
             "14": "Available",
             "15": "Available",
             "16": "Available"
@@ -22,7 +22,7 @@
         },
         "Wednesday": {
             "9": "Available",
-            "10": "Available",
+            "10": "ASwellDude",
             "11": "Available",
             "12": "Available",
             "13": "Available",
@@ -34,7 +34,7 @@
             "9": "Available",
             "10": "Available",
             "11": "Available",
-            "12": "Available",
+            "12": "ASwellDude",
             "13": "Available",
             "14": "Available",
             "15": "Available",
