@@ -3,6 +3,7 @@
 #include <fstream>
 #include <string>
 #include <array>
+#include <vector>
 #include "json.hpp"
 
 nlohmann::ordered_json getSchedulejson();

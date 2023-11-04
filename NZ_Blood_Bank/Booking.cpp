@@ -4,12 +4,24 @@ using json = nlohmann::ordered_json;
 using namespace std;
 
 string weekdays[5] = { "Monday", "Tuesday", "Wednesday", "Thursday", "Friday" };
-int hours[8] = { 9, 10, 11, 12, 13, 14, 15, 16 };
+vector<int> hours = { 9, 10, 11, 12, 13, 14, 15, 16 };
 
 json getSchedulejson() {
 	ifstream in("Schedule.json");
 	json j = json::parse(in);
 	return j;
+}
+
+vector<int> getAvailableHours(json j, string day) {
+	vector<int> Available_H;
+
+	for (int i = 0; i < size(hours); i++) {
+		string i_str = to_string(hours[i]);
+		if (j["Days"][day][i_str] == "Available") {
+			Available_H.push_back(hours[i]);
+		}
+	}
+	return Available_H;
 }
 
 void inSchedule(string day, int hour, string user, json j) {
@@ -29,17 +41,14 @@ void inSchedule(string day, int hour, string user, json j) {
 int getHour(json j, string day) { // user picks time of day
 	int userinput;
 	int counter = 1;
-	for (int i = 0; i < size(hours); i++) {
-		string i_str = to_string(hours[i]);
-		if (j["Days"][day][i_str] == "Available") {
-			cout << counter << ". " << hours[i] << ":00" << endl;
-			counter++;
-		}
+	vector<int> Available_H = getAvailableHours(j, day);
+	for (int i = 0; i < size(Available_H); i++) {
+		cout << i + 1 << ". (" << Available_H[i] << ":00)" << endl;
 	}
-	cout << "Pick a time of day (1 - " << size(hours) << "): ";
+	cout << "Pick a time of day (1 - " << size(Available_H) << "): ";
 	cin >> userinput;
 	system("cls");
-	return hours[userinput - 1]; // not working correctly, pls fix
+	return Available_H[userinput - 1];
 }
 
 string getDay() { // user picks day
