@@ -1,4 +1,5 @@
 #include "TempStartMenu.h"
+#include "intro_screen.h"
 using namespace std;
 
 extern void BookAppointment(string);
@@ -10,9 +11,9 @@ void start(bool& loggedIn, string& user) {
     while (!loggedIn) { // does this if user is not logged in
         system("cls");
         
-        int userinput;
+        draw_intro();
 
-        cout << "1. Log In\n2. Sign up" << endl;
+        int userinput;
         cin >> userinput;
 
         if (userinput == 1) {
@@ -26,9 +27,7 @@ void start(bool& loggedIn, string& user) {
         if (userinput == 2) {
             Register();
         }
-        else {
-            userinput = 1;
-        }
+
     }
 
     while (loggedIn) { // does this if user is logged in
