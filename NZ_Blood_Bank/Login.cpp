@@ -47,10 +47,8 @@ string LogIn() {
 	cin >> username;
 
 	if (FindUsername(Doc, username)) {
-		fstream file;
-		file.open("user_data.json", std::ios::out);
-		file << std::setw(4) << Doc;
-		file.close();
+		ofstream file("user_data.json");
+		file << setw(4) << Doc;
 		return username;
 	}
 	else {
