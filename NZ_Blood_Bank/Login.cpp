@@ -14,7 +14,7 @@ bool PasswordCheck(json j, string str) {
 	else { return false; }
 }
 
-bool getLogin(json j, string usr) {
+bool FindUsername(json j, string usr) {
 	if (j.contains(usr)) {
 
 		if (PasswordCheck(j, usr)) {
@@ -46,7 +46,7 @@ string LogIn() {
 
 	cin >> username;
 
-	if (getLogin(Doc, username)) {
+	if (FindUsername(Doc, username)) {
 		ofstream file("user_data.json");
 		file << setw(4) << Doc;
 		return username;
