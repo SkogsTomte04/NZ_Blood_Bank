@@ -38,5 +38,25 @@
             "Prev_Donation_Date": "never",
             "dob": "040420"
         }
+    },
+    "Miltonios": {
+        "Appointment_Date": {
+            "Hour": "9",
+            "day": "Monday"
+        },
+        "User_Info": {
+            "Adress": "244 Sunset Road",
+            "Blood_Group": "A+",
+            "Contact_no": "073356830",
+            "Email": "MilleKille321@gmail.com",
+            "Ethnicity": "Very white",
+            "First_Name": "Milton",
+            "Last_Name": "Leinonen",
+            "Med_Conditions": "P.D",
+            "Nationality": "Finn",
+            "Password": "MilleLille",
+            "Prev_Donation_Date": "66",
+            "dob": "idk"
+        }
     }
 }

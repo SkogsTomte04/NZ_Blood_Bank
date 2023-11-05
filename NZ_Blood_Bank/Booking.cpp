@@ -73,25 +73,30 @@ void BookAppointment(string user) { // Gives user object both day of and time of
 		time = j_Userdata[user]["Appointment_Date"]["Hour"];
 		day = j_Userdata[user]["Appointment_Date"]["day"];
 
-		cout << "You already have a booked day!\n\nWould you like to change date? (y/n)" << endl;
-		cout << time << endl;
+		cout << "You already have a booked day!\n\n1. Change date\n2. Unbook\n3. Back to home" << endl;
 		cin >> userinput;
+
 		if (userinput == 1) {
 			j_Schedule["Days"][day][time] = "Available";
+
 			string newday = getDay();
 			string newtime = to_string(getHour(j_Schedule, day));
-			cout << newtime << endl;
-			system("pause");
+
 			j_Schedule = NewDate(j_Schedule, newday, newtime, user);
 			j_Userdata = updateUserdate(j_Userdata, newday, newtime, user);
 		}
 		if (userinput == 2) {
-
+			j_Schedule["Days"][day][time] = "Available";
+			j_Schedule["Clients"].erase(j_Schedule["Clients"].find(user));
+		}
+		if (userinput == 3) {
+			
 		}
 	}
 	else {
 		day = getDay();
 		time = to_string(getHour(j_Schedule, day));
+
 		j_Schedule = NewDate(j_Schedule, day, time, user);
 		j_Userdata = updateUserdate(j_Userdata, day, time, user);
 	}
