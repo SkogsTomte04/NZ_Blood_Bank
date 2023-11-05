@@ -8,7 +8,7 @@
 
 nlohmann::json NewDate(nlohmann::json, std::string, std::string, std::string);
 
-nlohmann::json updateUserdate(nlohmann::json, std::string, std::string, std::string);
+nlohmann::json updateUserdate(nlohmann::json, std::string, int, std::string);
 
 int getHour(nlohmann::json, std::string);
 

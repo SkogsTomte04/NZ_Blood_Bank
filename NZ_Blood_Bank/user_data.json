@@ -1,8 +1,8 @@
 {
     "1": {
         "Appointment_Date": {
-            "Hour": "10",
-            "day": "Monday"
+            "Hour": 10,
+            "day": "Tuesday"
         },
         "User_Info": {
             "Adress": "1",
@@ -41,7 +41,7 @@
     },
     "Miltonios": {
         "Appointment_Date": {
-            "Hour": "9",
+            "Hour": 9,
             "day": "Monday"
         },
         "User_Info": {

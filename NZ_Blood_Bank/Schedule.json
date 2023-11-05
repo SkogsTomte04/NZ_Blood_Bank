@@ -12,7 +12,7 @@
         },
         "Tuesday": {
             "9": "Available",
-            "10": "Available",
+            "10": "1",
             "11": "Available",
             "12": "Available",
             "13": "Available",
@@ -52,6 +52,7 @@
         }
     },
     "Clients": {
-        "Miltonios": "Donation"
+        "Miltonios": "Donation",
+        "1": "Donation"
     }
 }

@@ -45,7 +45,7 @@ string getDay() { // user picks day
 	return weekdays[userinput - 1];
 }
 
-json updateUserdate(json j, string day, string time, string user) {
+json updateUserdate(json j, string day, int time, string user) {
 	j[user]["Appointment_Date"]["day"] = day;
 	j[user]["Appointment_Date"]["Hour"] = time;
 	return j;
@@ -66,7 +66,8 @@ void BookAppointment(string user) { // Gives user object both day of and time of
 	json j_Userdata = json::parse(readUserdata);
 	json j_Schedule = json::parse(readSchedule);
 
-	string time, day;
+	string day;
+	int time;
 
 	if (j_Schedule["Clients"].contains(user)) {
 		int userinput;
@@ -77,16 +78,16 @@ void BookAppointment(string user) { // Gives user object both day of and time of
 		cin >> userinput;
 
 		if (userinput == 1) {
-			j_Schedule["Days"][day][time] = "Available";
+			j_Schedule["Days"][day][to_string(time)] = "Available";
 
-			string newday = getDay();
-			string newtime = to_string(getHour(j_Schedule, day));
+			day = getDay();
+			time = getHour(j_Schedule, day);
 
-			j_Schedule = NewDate(j_Schedule, newday, newtime, user);
-			j_Userdata = updateUserdate(j_Userdata, newday, newtime, user);
+			j_Schedule = NewDate(j_Schedule, day, to_string(time), user);
+			j_Userdata = updateUserdate(j_Userdata, day, time, user);
 		}
 		if (userinput == 2) {
-			j_Schedule["Days"][day][time] = "Available";
+			j_Schedule["Days"][day][to_string(time)] = "Available";
 			j_Schedule["Clients"].erase(j_Schedule["Clients"].find(user));
 		}
 		if (userinput == 3) {
@@ -95,9 +96,9 @@ void BookAppointment(string user) { // Gives user object both day of and time of
 	}
 	else {
 		day = getDay();
-		time = to_string(getHour(j_Schedule, day));
+		time = getHour(j_Schedule, day);
 
-		j_Schedule = NewDate(j_Schedule, day, time, user);
+		j_Schedule = NewDate(j_Schedule, day, to_string(time), user);
 		j_Userdata = updateUserdate(j_Userdata, day, time, user);
 	}
 	

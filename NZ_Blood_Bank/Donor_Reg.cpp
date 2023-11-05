@@ -9,6 +9,7 @@ string FileArray[12] = { "First_Name", "Last_Name",
 "Prev_Donation_Date", "Password" };
 
 
+
 string getUsername() {
 	string str;
 	cout << "Enter a Username: " << endl;
