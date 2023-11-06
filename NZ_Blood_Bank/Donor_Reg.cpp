@@ -1,14 +1,8 @@
 #include "Donor_Reg.h"
 
-using json = nlohmann::json;
+using json = nlohmann::ordered_json;
 using namespace std;
 
-<<<<<<< Updated upstream
-string FileArray[12] = { "First_Name", "Last_Name", "dob", "Nationality", "Ethnicity", "Med_Conditions", "Blood_Group", "Contact_no", "Email", "Adress", "Prev_Donation_Date", "Password" };
-
-
-string getUsername() {
-=======
 string FileArray[12] = { "First_Name", "Last_Name", 
 "dob", "Nationality", "Ethnicity", "Med_Conditions", 
 "Blood_Group", "Contact_no", "Email", "Adress", 
@@ -16,7 +10,6 @@ string FileArray[12] = { "First_Name", "Last_Name",
 
 string getUsername(nlohmann::ordered_json j) {
 	bool isUnique = false;
->>>>>>> Stashed changes
 	string str;
 	while (!isUnique) {
 		cout << "Enter a Username: " << endl;
@@ -36,15 +29,11 @@ void Register() {
 	system("cls");
 
 	ifstream in("user_data.json");
-<<<<<<< Updated upstream
-	json Doc = json::parse(in);
-=======
 	auto Doc = nlohmann::ordered_json::parse(in); //creates a json object 
->>>>>>> Stashed changes
 
 	struct User
 	{
-		string username = getUsername(Doc);
+		string username = getUsername();
 		string firstName;
 		string lastName;
 		int DOB[3];
@@ -58,23 +47,6 @@ void Register() {
 		int prev_donation[3];
 		string password;
 
-<<<<<<< Updated upstream
-	Doc[username];
-
-	Doc[username]["isActive"] = false;
-	Doc[username]["Appointment_Date"] = { {"day", "n/a"} , {"Hour", 0} };
-
-	for (int i = 0; i < size(FileArray); i++) {
-		string userInput;
-
-		cout << FileArray[i] << ": ";
-		getline(cin, userInput);
-		while (userInput.length() == 0) {
-			getline(cin, userInput);
-		}
-		Doc[username]["User_Info"][FileArray[i]] = userInput;
-	}
-=======
 	}userStruct;
 
 	Doc[userStruct.username] = {
@@ -98,9 +70,8 @@ void Register() {
 	};
 	
 
->>>>>>> Stashed changes
 	fstream file;
-	file.open("user_data.json", std::ios::out);
-	file << std::setw(4) << Doc;
-	file.close();
+	file.open("user_data.json", std::ios::out); // opens json file
+	file << std::setw(4) << Doc; // inserts changes into json file
+	file.close(); // close json file
 }
