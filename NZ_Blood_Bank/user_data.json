@@ -1,4 +1,5 @@
 {
+<<<<<<< Updated upstream
     "AswellDude": { //pay no mind to the contents of this json, i was bored :^|
         "Adress": "Sunset Road 244",
         "Blood_Group": "B+",
@@ -14,11 +15,37 @@
         "Username": "AswellDude",
         "dob": "040420",
         "isActive": false
+=======
+    "1": {
+        "Appointment_Date": {
+            "Day": "Tuesday",
+            "Hour": 10
+        },
+        "User_Info": {
+            "Adress": "1",
+            "Blood_Group": "1",
+            "Contact_no": "1",
+            "Email": "1",
+            "Ethnicity": "1",
+            "First_Name": "1",
+            "Last_Name": "1",
+            "Med_Conditions": "1",
+            "Nationality": "1",
+            "Password": "1",
+            "Prev_Donation_Date": "1",
+            "dob": "1"
+        }
+>>>>>>> Stashed changes
     },
     "FreddyFazber": {
         "Appointment_Date": {
+<<<<<<< Updated upstream
             "Hour": 0,
             "day": 0
+=======
+            "Day": "Monday",
+            "Hour": 11
+>>>>>>> Stashed changes
         },
         "User_Info": {
             "Adress": "Pizzeria fazztbear",
@@ -52,6 +79,26 @@
         "dob": "Idono_man",
         "isActive": false
     },
+    "JordiBoy": {
+        "Appointment_Date": {
+            "Day": "Thursday",
+            "Hour": 12
+        },
+        "User_Info": {
+            "Adress": "244 Sunset road",
+            "Blood_Group": "F-",
+            "Contact_no": "07434829532",
+            "Email": "JordieReid@gmail.com",
+            "Ethnicity": "White",
+            "First_Name": "Jordie",
+            "Last_Name": "Reid",
+            "Med_Conditions": "The nasty ones",
+            "Nationality": "South africa ",
+            "Password": "Jordster",
+            "Prev_Donation_Date": "never",
+            "dob": "too old"
+        }
+    },
     "Miltonios": {
         "Adress": "Freak Street !",
         "Blood_Group": "O-",
@@ -71,6 +118,7 @@
     "t": {
         "Adress": "t",
         "Appointment_Date": {
+<<<<<<< Updated upstream
             "Hour": 13,
             "day": "Tuesday"
         },
@@ -124,5 +172,71 @@
         "Username": "yb46yb",
         "dob": "46",
         "isActive": false
+=======
+            "Day": "Monday",
+            "Hour": 9
+        },
+        "User_Info": {
+            "Adress": "244 Sunset Road",
+            "Blood_Group": "A+",
+            "Contact_no": "073356830",
+            "Email": "MilleKille321@gmail.com",
+            "Ethnicity": "Very white",
+            "First_Name": "Milton",
+            "Last_Name": "Leinonen",
+            "Med_Conditions": "P.D",
+            "Nationality": "Finn",
+            "Password": "MilleLille",
+            "Prev_Donation_Date": "66",
+            "dob": "idk"
+        }
+    },
+    "OnlySpoonFull": {
+        "Appointment_Date": {
+            "Day": "n/a",
+            "Hour": 0
+        },
+        "User_Info": {
+            "Adress": "544 VineStreet",
+            "Blood_Group": "Spoon+",
+            "Contact_no": "075204764",
+            "Email": "LittleSpoonKing@gmail.com",
+            "Ethnicity": "African-american",
+            "First_Name": "King",
+            "Last_Name": "Bach",
+            "Med_Conditions": "Too much icecream",
+            "Nationality": "american",
+            "Password": "SpoonLover",
+            "Prev_Donation_Date": "Every dy",
+            "dob": "vine age"
+        }
+    },
+    "T": {
+        "User_Info": {
+            "First_Name": "",
+            "Last_Name": "",
+            "DOB": [
+                -858993460,
+                -858993460,
+                -858993460
+            ],
+            "Nationality": "",
+            "Ethnicity": "",
+            "Blood_Group": "",
+            "Contact_no": -858993460,
+            "Email": "",
+            "Adress": "",
+            "Prev_Donation_Date": [
+                -858993460,
+                -858993460,
+                -858993460
+            ],
+            "Password": ""
+        },
+        "Appointment_Date": {
+            "Day": "N/A",
+            "Time": 0
+        }
+>>>>>>> Stashed changes
     }
 }

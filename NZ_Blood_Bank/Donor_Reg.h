@@ -5,6 +5,6 @@
 #include <vector>
 #include "json.hpp"
 
-std::string getUsername();
+std::string getUsername(nlohmann::ordered_json);
 
 void Register();
