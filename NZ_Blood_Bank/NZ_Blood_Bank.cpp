@@ -3,6 +3,7 @@
 #include "LogIn.h"
 #include "Booking.h"
 #include "intro_screen.h"
+#include "jsonManager.h"
 
 
 int main()

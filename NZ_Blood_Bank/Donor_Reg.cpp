@@ -1,12 +1,30 @@
 #include "Donor_Reg.h"
+#include "jsonManager.h"
+
 
 using json = nlohmann::ordered_json;
 using namespace std;
 
-string FileArray[12] = { "First_Name", "Last_Name",
-"dob", "Nationality", "Ethnicity", "Med_Conditions",
-"Blood_Group", "Contact_no", "Email", "Adress",
-"Prev_Donation_Date", "Password" };
+std::array <int,3> getDate(string category) {
+	string dmy[3] = {"Day (DD)", "Month (MM)", "Year (YY)"};
+	array <int, 3> date;
+	
+	cout << category << endl;
+	for (int i = 0; i < size(date); i++) {
+		cout << dmy[i] << ": ";
+		cin >> date[i];
+	}
+
+	return date;
+}
+
+string getString(string category) {
+	string str;
+	cout << category << ": ";
+
+	cin >> str;
+	return str;
+}
 
 string getUsername(nlohmann::ordered_json j) {
 	bool isUnique = false;
@@ -25,15 +43,16 @@ string getUsername(nlohmann::ordered_json j) {
 }
 
 void Register() {
-	ifstream in("user_data.json");
-	auto Doc = nlohmann::ordered_json::parse(in); //creates a json object 
+	/*ifstream in("user_data.json");
+	auto Doc = nlohmann::ordered_json::parse(in);*/ //creates a json object 
+	json Doc = getUserdata();
 
 	struct User
 	{
 		string username;
 		string firstName;
 		string lastName;
-		int DOB[3];
+		array<int,3> DOB;
 		string nationality;
 		string ethnicity;
 		vector<string> medical;
@@ -46,13 +65,22 @@ void Register() {
 
 	}userStruct;
 
-	userStruct.firstName = getUsername(Doc);
+	userStruct.username = getUsername(Doc);
+	userStruct.firstName = getString("First name");
+	userStruct.lastName = getString("Last name");
+	userStruct.DOB = getDate("Date of birth");
+	userStruct.nationality = getString("Nationality");
+	userStruct.ethnicity = getString("Ethnicity");
 
 	Doc[userStruct.username] = {
 		{"User_Info", {
 			{"First_Name", userStruct.firstName},
 			{"Last_Name", userStruct.lastName},
-			{"DOB", userStruct.DOB},
+			{"DOB", {
+				{"DD", userStruct.DOB[0]},
+				{"MM", userStruct.DOB[1]},
+				{"YY", userStruct.DOB[2]}
+			}},
 			{"Nationality", userStruct.nationality},
 			{"Ethnicity", userStruct.ethnicity},
 			{"Blood_Group", userStruct.bloodGroup},
@@ -69,8 +97,9 @@ void Register() {
 	};
 
 
-	fstream file;
-	file.open("user_data.json", std::ios::out); // opens json file
-	file << std::setw(4) << Doc; // inserts changes into json file
-	file.close(); // close json file
+	//fstream file;
+	//file.open("user_data.json", std::ios::out); // opens json file
+	//file << std::setw(4) << Doc; // inserts changes into json file
+	//file.close(); // close json file
+	updateJson(Doc, "user_data.json");
 }
