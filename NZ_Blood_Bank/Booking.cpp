@@ -46,8 +46,8 @@ string getDay() { // user picks day
 }
 
 json updateUserdate(json j, string day, int time, string user) {
-	j[user]["Appointment_Date"]["day"] = day;
-	j[user]["Appointment_Date"]["Hour"] = time;
+	j[user]["Appointment_Date"]["Day"] = day;
+	j[user]["Appointment_Date"]["Time"] = time;
 	return j;
 }
 
@@ -71,8 +71,8 @@ void BookAppointment(string user) { // Gives user object both day of and time of
 
 	if (j_Schedule["Clients"].contains(user)) {
 		int userinput;
-		time = j_Userdata[user]["Appointment_Date"]["Hour"];
-		day = j_Userdata[user]["Appointment_Date"]["day"];
+		time = j_Userdata[user]["Appointment_Date"]["Time"];
+		day = j_Userdata[user]["Appointment_Date"]["Day"];
 
 		cout << "You already have a booked day!\n\n1. Change date\n2. Unbook\n3. Back to home" << endl;
 		cin >> userinput;
@@ -89,6 +89,7 @@ void BookAppointment(string user) { // Gives user object both day of and time of
 		if (userinput == 2) {
 			j_Schedule["Days"][day][to_string(time)] = "Available";
 			j_Schedule["Clients"].erase(j_Schedule["Clients"].find(user));
+			j_Userdata = updateUserdate(j_Userdata, "n/a", 0, user);
 		}
 		if (userinput == 3) {
 			

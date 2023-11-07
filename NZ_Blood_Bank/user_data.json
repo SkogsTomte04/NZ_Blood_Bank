@@ -1,8 +1,8 @@
 {
     "1": {
         "Appointment_Date": {
-            "Hour": 10,
-            "day": "Tuesday"
+            "Day": "n/a",
+            "Time": 0
         },
         "User_Info": {
             "Adress": "1",
@@ -21,8 +21,8 @@
     },
     "ASwellDude": {
         "Appointment_Date": {
-            "Hour": 13,
-            "day": "Monday"
+            "Day": "Monday",
+            "Time": 13
         },
         "User_Info": {
             "Adress": "244 Sunset road",
@@ -41,8 +41,8 @@
     },
     "Miltonios": {
         "Appointment_Date": {
-            "Hour": 9,
-            "day": "Monday"
+            "Day": "Monday",
+            "Time": 9
         },
         "User_Info": {
             "Adress": "244 Sunset Road",
