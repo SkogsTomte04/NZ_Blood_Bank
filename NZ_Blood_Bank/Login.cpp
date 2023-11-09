@@ -8,6 +8,7 @@ bool PasswordCheck(json j, string str) {
 	string password;
 	cout << "Password: ";
 	cin >> password;
+	
 	if (j[str]["User_Info"]["Password"] == password) {
 		return true;
 	}
