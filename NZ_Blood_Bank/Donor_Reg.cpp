@@ -5,6 +5,70 @@
 using json = nlohmann::ordered_json;
 using namespace std;
 
+struct User
+{
+	string username;
+	string firstName;
+	string lastName;
+	array<int, 3> DOB;
+	string nationality;
+	string ethnicity;
+	vector<string> medical;
+	string bloodGroup;
+	long int contact;
+	string email;
+	string adress;
+	array<int, 3> prev_donation;
+	string password;
+
+};
+
+string getString(string category) {
+	string str;
+	cout << category << ": " << endl;
+
+	//cin.ignore();
+	getline(cin, str);
+
+	system("cls");
+	return str;
+}
+
+long int getInt(string category) {
+	long int i;
+	cout << category << ": ";
+
+	cin >> i;
+
+	cin.ignore();
+	system("cls");
+	return i;
+}
+
+std::vector <string> getVector(string category) {
+	vector<string> vec;
+	string str;
+
+	while (true) {
+		cout << category << ":" << endl;
+		for (int i = 0; i < size(vec); i++) {
+			cout << vec[i] << endl;
+		}
+		str = getString("Enter a medical condition \nor enter \"none\" if you have no more to add");
+		cout << endl;
+		if (str != "none") {
+			vec.push_back(str);
+		}
+		else if (str == "none") {
+			break;
+		}
+		system("cls");
+	}
+
+	system("cls");
+	return vec;
+}
+
 std::array <int,3> getDate(string category) {
 	string dmy[3] = {"Day (DD)", "Month (MM)", "Year (YY)"};
 	array <int, 3> date;
@@ -14,16 +78,9 @@ std::array <int,3> getDate(string category) {
 		cout << dmy[i] << ": ";
 		cin >> date[i];
 	}
-
+	cin.ignore();
+	system("cls");
 	return date;
-}
-
-string getString(string category) {
-	string str;
-	cout << category << ": ";
-
-	cin >> str;
-	return str;
 }
 
 string getUsername(nlohmann::ordered_json j) {
@@ -37,6 +94,7 @@ string getUsername(nlohmann::ordered_json j) {
 			cout << "Username taken!" << endl;
 		}
 		else {
+			system("cls");
 			return str;
 		}
 	}
@@ -47,30 +105,22 @@ void Register() {
 	auto Doc = nlohmann::ordered_json::parse(in);*/ //creates a json object 
 	json Doc = getUserdata();
 
-	struct User
-	{
-		string username;
-		string firstName;
-		string lastName;
-		array<int,3> DOB;
-		string nationality;
-		string ethnicity;
-		vector<string> medical;
-		string bloodGroup;
-		int contact;
-		string email;
-		string adress;
-		int prev_donation[3];
-		string password;
-
-	}userStruct;
+	User userStruct;
 
 	userStruct.username = getUsername(Doc);
+	userStruct.password = getString("Password");
 	userStruct.firstName = getString("First name");
 	userStruct.lastName = getString("Last name");
 	userStruct.DOB = getDate("Date of birth");
 	userStruct.nationality = getString("Nationality");
 	userStruct.ethnicity = getString("Ethnicity");
+	userStruct.medical = getVector("Medical record");
+	userStruct.bloodGroup = getString("Blood Group");
+	userStruct.contact = getInt("Contact Number");
+	userStruct.email = getString("Email");
+	userStruct.adress = getString("Adress");
+	userStruct.prev_donation = getDate("Previous Donation date (fill out with \"0\" if no previous date)");
+	
 
 	Doc[userStruct.username] = {
 		{"User_Info", {

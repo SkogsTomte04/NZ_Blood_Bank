@@ -58,5 +58,113 @@
             "Prev_Donation_Date": "66",
             "dob": "idk"
         }
+    },
+    "TestUser": {
+        "User_Info": {
+            "First_Name": "user",
+            "Last_Name": "test",
+            "DOB": {
+                "DD": 3,
+                "MM": 4,
+                "YY": 98
+            },
+            "Nationality": "Swede",
+            "Ethnicity": "White",
+            "Blood_Group": "O+",
+            "Contact_no": 732306558,
+            "Email": "Testuser@gmail.com",
+            "Adress": "varmdogatan42",
+            "Prev_Donation_Date": [
+                4,
+                12,
+                20
+            ],
+            "Password": "123"
+        },
+        "Appointment_Date": {
+            "Day": "N/A",
+            "Time": 0
+        }
+    },
+    "Lopton": {
+        "User_Info": {
+            "First_Name": "ip",
+            "Last_Name": "on",
+            "DOB": {
+                "DD": 20,
+                "MM": 7,
+                "YY": 22
+            },
+            "Nationality": "Swede",
+            "Ethnicity": "hite",
+            "Blood_Group": "+",
+            "Contact_no": 732306558,
+            "Email": "liptonlondob@gmail.com",
+            "Adress": "armdogatan 42",
+            "Prev_Donation_Date": [
+                5,
+                6,
+                14
+            ],
+            "Password": "pass"
+        },
+        "Appointment_Date": {
+            "Day": "N/A",
+            "Time": 0
+        }
+    },
+    "NewUser": {
+        "User_Info": {
+            "First_Name": "New",
+            "Last_Name": "User",
+            "DOB": {
+                "DD": 4,
+                "MM": 4,
+                "YY": 4
+            },
+            "Nationality": "",
+            "Ethnicity": "White",
+            "Blood_Group": "A-",
+            "Contact_no": 732306558,
+            "Email": "",
+            "Adress": "Varmdogatan 42",
+            "Prev_Donation_Date": [
+                0,
+                -858993460,
+                -858993460
+            ],
+            "Password": ""
+        },
+        "Appointment_Date": {
+            "Day": "N/A",
+            "Time": 0
+        }
+    },
+    "Skrumin": {
+        "User_Info": {
+            "First_Name": "skimi",
+            "Last_Name": "Skomo",
+            "DOB": {
+                "DD": 6,
+                "MM": 11,
+                "YY": 58
+            },
+            "Nationality": "",
+            "Ethnicity": "white",
+            "Blood_Group": "ice",
+            "Contact_no": 598452986,
+            "Email": "",
+            "Adress": "Blabblaba 13",
+            "Prev_Donation_Date": [
+                0,
+                0,
+                0
+            ],
+            "Password": ""
+        },
+        "Appointment_Date": {
+            "Day": "N/A",
+            "Time": 0
+        }
     }
 }
