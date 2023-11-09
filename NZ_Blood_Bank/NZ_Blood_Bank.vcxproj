@@ -129,6 +129,12 @@
   <ItemGroup>
     <ClCompile Include="NZ_Blood_Bank.cpp" />
   </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Recipient%27sRegistration.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="Patient%27sDetails.txt" />
+  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>
