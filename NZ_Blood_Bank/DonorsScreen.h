@@ -24,4 +24,5 @@ void DScreen() {
 		"7. Weight loss\n"
 		"8. Help improve your mental state\n";
 	std::cout << "----------------------------------" << '\n' << '\n';
+	system("pause");
 }

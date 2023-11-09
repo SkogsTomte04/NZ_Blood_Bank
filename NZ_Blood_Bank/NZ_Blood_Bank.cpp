@@ -1,5 +1,6 @@
 #include <iostream>
 #include "Donor_Reg.h"
+#include "DonorsScreen.h"
 #include "LogIn.h"
 #include "Booking.h"
 #include "intro_screen.h"
@@ -37,9 +38,11 @@ int main()
         while (loggedIn) { // does this if user is logged in
             system("cls");
             int userinput;
+            
             cout << "1. Book appointment\n2. Log out" << endl;
             cin >> userinput;
-            if (userinput == 1) { // PLEASE add a check to see if user already has a booked date
+            if (userinput == 1) {
+                DScreen();
                 BookAppointment(activeUser);
             }
             if (userinput == 2) {

@@ -44,6 +44,9 @@
     <ClInclude Include="jsonManager.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="DonorsScreen.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <None Include="user_data.json">

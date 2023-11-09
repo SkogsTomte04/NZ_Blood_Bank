@@ -135,6 +135,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Booking.h" />
+    <ClInclude Include="DonorsScreen.h" />
     <ClInclude Include="Donor_Reg.h" />
     <ClInclude Include="jsonManager.h" />
     <ClInclude Include="LogIn.h" />
