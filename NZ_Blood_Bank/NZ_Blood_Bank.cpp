@@ -4,6 +4,7 @@
 #include "LogIn.h"
 #include "Booking.h"
 #include "intro_screen.h"
+#include "Recipient'sRegistration.h"
 #include "jsonManager.h"
 
 
@@ -30,7 +31,15 @@ int main()
 
             }
             if (userinput == 2) {
-                Register();
+                cout << "Donate or receive?\n\n1. Donate\n2. Receive" << endl;
+                cin >> userinput;
+                cin.ignore();
+                if (userinput == 1) {
+                    Register();
+                }
+                if (userinput == 2) {
+                    patient_details();
+                }
             }
 
         }

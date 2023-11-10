@@ -86,85 +86,15 @@
             "dob": "idk"
         }
     },
-    "NewUser": {
-        "Appointment_Date": {
-            "Day": "N/A",
-            "Time": 0
-        },
-        "User_Info": {
-            "Adress": "Varmdogatan 42",
-            "Blood_Group": "A-",
-            "Contact_no": 732306558,
-            "DOB": {
-                "DD": 4,
-                "MM": 4,
-                "YY": 4
-            },
-            "Email": "",
-            "Ethnicity": "White",
-            "First_Name": "New",
-            "Last_Name": "User",
-            "Nationality": "",
-            "Password": "",
-            "Prev_Donation_Date": [
-                0,
-                -858993460,
-                -858993460
-            ]
-        }
-    },
-    "Skrumin": {
-        "Appointment_Date": {
-            "Day": "N/A",
-            "Time": 0
-        },
-        "User_Info": {
-            "Adress": "Blabblaba 13",
-            "Blood_Group": "ice",
-            "Contact_no": 598452986,
-            "DOB": {
-                "DD": 6,
-                "MM": 11,
-                "YY": 58
-            },
-            "Email": "",
-            "Ethnicity": "white",
-            "First_Name": "skimi",
-            "Last_Name": "Skomo",
-            "Nationality": "",
-            "Password": "",
-            "Prev_Donation_Date": [
-                0,
-                0,
-                0
-            ]
-        }
-    },
-    "TestUser": {
-        "Appointment_Date": {
-            "Day": "N/A",
-            "Time": 0
-        },
-        "User_Info": {
-            "Adress": "varmdogatan42",
-            "Blood_Group": "O+",
-            "Contact_no": 732306558,
-            "DOB": {
-                "DD": 3,
-                "MM": 4,
-                "YY": 98
-            },
-            "Email": "Testuser@gmail.com",
-            "Ethnicity": "White",
-            "First_Name": "user",
-            "Last_Name": "test",
-            "Nationality": "Swede",
-            "Password": "123",
-            "Prev_Donation_Date": [
-                4,
-                12,
-                20
-            ]
+    "Recipiants": {
+        "William Moller": {
+            "User_Info": {
+                "Full name": "William Moller",
+                "Hospital/Bloodbank": "Swedbank",
+                "Adress": "244 Sunset Road",
+                "Email": "williammoller321@gmail.com",
+                "Contact_no": "0732306558"
+            }
         }
     }
 }
