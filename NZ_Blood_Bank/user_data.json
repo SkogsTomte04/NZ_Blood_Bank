@@ -86,24 +86,29 @@
             "dob": "idk"
         }
     },
-    "Recipiants": {
-        "William Moller": {
-            "User_Info": {
-                "Full name": "William Moller",
-                "Hospital/Bloodbank": "Swedbank",
-                "Adress": "244 Sunset Road",
-                "Email": "williammoller321@gmail.com",
-                "Contact_no": "0732306558"
-            }
-        },
-        "Narek": {
-            "User_Info": {
-                "Full name": "Narek",
-                "Hospital/Bloodbank": "Swebank",
-                "Adress": "gruvgatan 2 billesholm",
-                "Email": "joahheneklund@gmail.com",
-                "Contact_no": "911"
-            }
-        }
+  "Recipiants": {
+    "William Moller": {
+      "User_Info": {
+        "Full name": "William Moller",
+        "Hospital/Bloodbank": "Swedbank",
+        "Adress": "244 Sunset Road",
+        "Email": "williammoller321@gmail.com",
+        "Contact_no": "0732306558"
+      }
+    },
+    "Narek": {
+      "User_Info": {
+        "Full name": "Narek",
+        "Hospital/Bloodbank": "Swebank",
+        "Adress": "gruvgatan 2 billesholm",
+        "Email": "joahheneklund@gmail.com",
+        "Contact_no": "911"
+      }
     }
+  },
+  "ADMINS": {
+    "5": {
+      "Password": "5"
+    }
+  }
 }
