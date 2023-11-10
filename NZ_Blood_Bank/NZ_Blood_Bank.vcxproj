@@ -134,6 +134,7 @@
     <ClCompile Include="NZ_Blood_Bank.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="admin_screen.h" />
     <ClInclude Include="Booking.h" />
     <ClInclude Include="DonorsScreen.h" />
     <ClInclude Include="Donor_Reg.h" />

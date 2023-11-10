@@ -95,6 +95,15 @@
                 "Email": "williammoller321@gmail.com",
                 "Contact_no": "0732306558"
             }
+        },
+        "Narek": {
+            "User_Info": {
+                "Full name": "Narek",
+                "Hospital/Bloodbank": "Swebank",
+                "Adress": "gruvgatan 2 billesholm",
+                "Email": "joahheneklund@gmail.com",
+                "Contact_no": "911"
+            }
         }
     }
 }
