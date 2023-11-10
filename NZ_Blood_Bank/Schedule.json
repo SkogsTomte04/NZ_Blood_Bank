@@ -1,8 +1,8 @@
 {
     "Days": {
         "Monday": {
-            "9": "Miltonios",
-            "10": "Available",
+            "9": "1",
+            "10": "ASwellDude",
             "11": "Available",
             "12": "Available",
             "13": "Available",
@@ -52,6 +52,15 @@
         }
     },
     "Clients": {
-        "Miltonios": "Donation"
+        "Donation": {
+            "1": {
+                "Day": "Monday",
+                "Time": "9"
+            },
+            "ASwellDude": {
+                "Day": "Monday",
+                "Time": "10"
+            }
+        }
     }
 }

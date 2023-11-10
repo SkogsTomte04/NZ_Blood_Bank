@@ -1,12 +1,11 @@
 #include "Booking.h"
+#include "jsonManager.h"
 
 using json = nlohmann::ordered_json;
 using namespace std;
 
 string weekdays[5] = { "Monday", "Tuesday", "Wednesday", "Thursday", "Friday" };
 vector<int> hours = { 9, 10, 11, 12, 13, 14, 15, 16 };
-
-
 
 vector<int> getAvailableHours(json j, string day) {
 	vector<int> Available_H;
@@ -20,9 +19,8 @@ vector<int> getAvailableHours(json j, string day) {
 	return Available_H;
 }
 
-int getHour(json j, string day) { // user picks time of day
+int getTime(json j, string day) { // user picks time of day
 	int userinput;
-	int counter = 1;
 	vector<int> Available_H = getAvailableHours(j, day);
 	for (int i = 0; i < size(Available_H); i++) {
 		cout << i + 1 << ". (" << Available_H[i] << ":00)" << endl;
@@ -54,17 +52,14 @@ json updateUserdate(json j, string day, int time, string user) {
 json NewDate(json j, string day, string time, string user) {
 	
 	j["Days"][day][time] = user;
-	j["Clients"][user] = "Donation";
+	j["Clients"]["Donation"][user] = { { "Day",day }, {"Time", time}};
 	return j;
 }
 
 void BookAppointment(string user) { // Gives user object both day of and time of appointment
 	system("cls");
-
-	ifstream readUserdata("user_data.json");
-	ifstream readSchedule("Schedule.json");
-	json j_Userdata = json::parse(readUserdata);
-	json j_Schedule = json::parse(readSchedule);
+	json j_Userdata = getUserdata();
+	json j_Schedule = getScheduledata();
 
 	string day;
 	int time;
@@ -81,7 +76,7 @@ void BookAppointment(string user) { // Gives user object both day of and time of
 			j_Schedule["Days"][day][to_string(time)] = "Available";
 
 			day = getDay();
-			time = getHour(j_Schedule, day);
+			time = getTime(j_Schedule, day);
 
 			j_Schedule = NewDate(j_Schedule, day, to_string(time), user);
 			j_Userdata = updateUserdate(j_Userdata, day, time, user);
@@ -97,20 +92,13 @@ void BookAppointment(string user) { // Gives user object both day of and time of
 	}
 	else {
 		day = getDay();
-		time = getHour(j_Schedule, day);
+		time = getTime(j_Schedule, day);
 
 		j_Schedule = NewDate(j_Schedule, day, to_string(time), user);
 		j_Userdata = updateUserdate(j_Userdata, day, time, user);
 	}
 	
-
-	fstream file;
-	file.open("user_data.json", std::ios::out);
-	file << std::setw(4) << j_Userdata;
-	file.close();
-	fstream fileTwo;
-	fileTwo.open("Schedule.json", std::ios::out);
-	fileTwo << std::setw(4) << j_Schedule;
-	fileTwo.close();
+	updateJson(j_Userdata, "user_data.json");
+	updateJson(j_Schedule, "Schedule.json");
 	
 }

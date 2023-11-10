@@ -1,8 +1,8 @@
 {
     "1": {
         "Appointment_Date": {
-            "Day": "n/a",
-            "Time": 0
+            "Day": "Monday",
+            "Time": 9
         },
         "User_Info": {
             "Adress": "1",
@@ -22,7 +22,7 @@
     "ASwellDude": {
         "Appointment_Date": {
             "Day": "Monday",
-            "Time": 13
+            "Time": 10
         },
         "User_Info": {
             "Adress": "244 Sunset road",
