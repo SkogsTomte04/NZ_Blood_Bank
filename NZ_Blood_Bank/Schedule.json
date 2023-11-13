@@ -3,7 +3,7 @@
         "Monday": {
             "9": "1",
             "10": "ASwellDude",
-            "11": "Available",
+            "11": "1",
             "12": "Available",
             "13": "Available",
             "14": "Available",
@@ -55,7 +55,7 @@
         "Donation": {
             "1": {
                 "Day": "Monday",
-                "Time": "9"
+                "Time": "11"
             },
             "ASwellDude": {
                 "Day": "Monday",

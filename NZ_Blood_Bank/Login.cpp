@@ -9,14 +9,14 @@ bool PasswordCheck(json j, string str) {
 	cout << "Password: ";
 	cin >> password;
 	
-	if (j[str]["User_Info"]["Password"] == password) {
+	if (j["Donators"][str]["User_Info"]["Password"] == password) {
 		return true;
 	}
 	else { return false; }
 }
 
 bool getLogin(json j, string usr) {
-	if (j.contains(usr)) {
+	if (j["Donators"].contains(usr)) {
 
 		if (PasswordCheck(j, usr)) {
 			return true;
@@ -27,6 +27,9 @@ bool getLogin(json j, string usr) {
 			system("cls");
 			return false;
 		}
+	}
+	else if (j["ADMINS"].contains(usr)) {
+
 	}
 	else {
 		cout << "Username not found!" << endl;
@@ -48,13 +51,10 @@ string LogIn() {
 	cin >> username;
 
 	if (getLogin(Doc, username)) {
-		ofstream file("user_data.json");
-		file << setw(4) << Doc;
 		return username;
 	}
 	else {
 		return "exe.fail";
 	}
-
 
 }

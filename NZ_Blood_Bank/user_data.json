@@ -1,114 +1,143 @@
 {
-    "1": {
-        "Appointment_Date": {
-            "Day": "Monday",
-            "Time": 9
-        },
-        "User_Info": {
-            "Adress": "1",
-            "Blood_Group": "1",
-            "Contact_no": "1",
-            "Email": "1",
-            "Ethnicity": "1",
-            "First_Name": "1",
-            "Last_Name": "1",
-            "Med_Conditions": "1",
-            "Nationality": "1",
-            "Password": "1",
-            "Prev_Donation_Date": "1",
-            "dob": "1"
+    "ADMINS": {
+        "5": {
+            "Password": "5"
         }
     },
-    "ASwellDude": {
-        "Appointment_Date": {
-            "Day": "Monday",
-            "Time": 10
-        },
-        "User_Info": {
-            "Adress": "244 Sunset road",
-            "Blood_Group": "O-",
-            "Contact_no": "0732306558",
-            "Email": "williammoller321@gmail.com",
-            "Ethnicity": "White",
-            "First_Name": "William",
-            "Last_Name": "Moller",
-            "Med_Conditions": "none",
-            "Nationality": "Swede",
-            "Password": "Bus05",
-            "Prev_Donation_Date": "never",
-            "dob": "040420"
-        }
-    },
-    "Lopton": {
-        "Appointment_Date": {
-            "Day": "N/A",
-            "Time": 0
-        },
-        "User_Info": {
-            "Adress": "armdogatan 42",
-            "Blood_Group": "+",
-            "Contact_no": 732306558,
-            "DOB": {
-                "DD": 20,
-                "MM": 7,
-                "YY": 22
+    "Donators": {
+        "1": {
+            "Appointment_Date": {
+                "Day": "Monday",
+                "Time": 11
             },
-            "Email": "liptonlondob@gmail.com",
-            "Ethnicity": "hite",
-            "First_Name": "ip",
-            "Last_Name": "on",
-            "Nationality": "Swede",
-            "Password": "pass",
-            "Prev_Donation_Date": [
-                5,
-                6,
-                14
-            ]
-        }
-    },
-    "Miltonios": {
-        "Appointment_Date": {
-            "Day": "Monday",
-            "Time": 9
+            "User_Info": {
+                "Adress": "1",
+                "Blood_Group": "1",
+                "Contact_no": "1",
+                "Email": "1",
+                "Ethnicity": "1",
+                "First_Name": "1",
+                "Last_Name": "1",
+                "Med_Conditions": "1",
+                "Nationality": "1",
+                "Password": "1",
+                "Prev_Donation_Date": "1",
+                "dob": "1"
+            }
         },
-        "User_Info": {
-            "Adress": "244 Sunset Road",
-            "Blood_Group": "A+",
-            "Contact_no": "073356830",
-            "Email": "MilleKille321@gmail.com",
-            "Ethnicity": "Very white",
-            "First_Name": "Milton",
-            "Last_Name": "Leinonen",
-            "Med_Conditions": "P.D",
-            "Nationality": "Finn",
-            "Password": "MilleLille",
-            "Prev_Donation_Date": "66",
-            "dob": "idk"
+        "ASwellDude": {
+            "Appointment_Date": {
+                "Day": "Monday",
+                "Time": 10
+            },
+            "User_Info": {
+                "Adress": "244 Sunset road",
+                "Blood_Group": "O-",
+                "Contact_no": "0732306558",
+                "Email": "williammoller321@gmail.com",
+                "Ethnicity": "White",
+                "First_Name": "William",
+                "Last_Name": "Moller",
+                "Med_Conditions": "none",
+                "Nationality": "Swede",
+                "Password": "Bus05",
+                "Prev_Donation_Date": "never",
+                "dob": "040420"
+            }
+        },
+        "Lopton": {
+            "Appointment_Date": {
+                "Day": "N/A",
+                "Time": 0
+            },
+            "User_Info": {
+                "Adress": "armdogatan 42",
+                "Blood_Group": "+",
+                "Contact_no": 732306558,
+                "DOB": {
+                    "DD": 20,
+                    "MM": 7,
+                    "YY": 22
+                },
+                "Email": "liptonlondob@gmail.com",
+                "Ethnicity": "hite",
+                "First_Name": "ip",
+                "Last_Name": "on",
+                "Nationality": "Swede",
+                "Password": "pass",
+                "Prev_Donation_Date": [
+                    5,
+                    6,
+                    14
+                ]
+            }
+        },
+        "Miltonios": {
+            "Appointment_Date": {
+                "Day": "Monday",
+                "Time": 9
+            },
+            "User_Info": {
+                "Adress": "244 Sunset Road",
+                "Blood_Group": "A+",
+                "Contact_no": "073356830",
+                "Email": "MilleKille321@gmail.com",
+                "Ethnicity": "Very white",
+                "First_Name": "Milton",
+                "Last_Name": "Leinonen",
+                "Med_Conditions": "P.D",
+                "Nationality": "Finn",
+                "Password": "MilleLille",
+                "Prev_Donation_Date": "66",
+                "dob": "idk"
+            }
+        },
+        "t": {
+            "Appointment_Date": {
+                "Day": "N/A",
+                "Time": 0
+            },
+            "User_Info": {
+                "Adress": "ttt",
+                "Blood_Group": "O",
+                "Contact_no": 4567,
+                "DOB": {
+                    "DD": 0,
+                    "MM": 0,
+                    "YY": 0
+                },
+                "Email": "ttt",
+                "Ethnicity": "t",
+                "First_Name": "t",
+                "Last_Name": "t",
+                "Nationality": "Swede",
+                "Password": "",
+                "Prev_Donation_Date": [
+                    8,
+                    6,
+                    4
+                ]
+            }
         }
     },
-  "Recipiants": {
-    "William Moller": {
-      "User_Info": {
-        "Full name": "William Moller",
-        "Hospital/Bloodbank": "Swedbank",
-        "Adress": "244 Sunset Road",
-        "Email": "williammoller321@gmail.com",
-        "Contact_no": "0732306558"
-      }
-    },
-    "Narek": {
-      "User_Info": {
-        "Full name": "Narek",
-        "Hospital/Bloodbank": "Swebank",
-        "Adress": "gruvgatan 2 billesholm",
-        "Email": "joahheneklund@gmail.com",
-        "Contact_no": "911"
-      }
+    "Recipiants": {
+        "Narek": {
+            "User_Info": {
+                "Adress": "gruvgatan 2 billesholm",
+                "Contact_no": "911",
+                "Email": "joahheneklund@gmail.com",
+                "Full name": "Narek",
+                "Hospital/Bloodbank": "Swebank"
+            }
+        },
+        "William Moller": {
+            "User_Info": {
+                "Adress": "244 Sunset Road",
+                "Contact_no": "0732306558",
+                "Email": "williammoller321@gmail.com",
+                "Full name": "William Moller",
+                "Hospital/Bloodbank": "Swedbank"
+            }
+        }
     }
-  },
-  "ADMINS": {
-    "5": {
-      "Password": "5"
-    }
-  }
 }

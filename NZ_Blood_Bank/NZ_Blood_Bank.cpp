@@ -24,6 +24,7 @@ int main()
 
             if (userinput == 1) {
                 string loginStatus = LogIn();
+                
                 if (loginStatus != "exe.fail") {
                     activeUser = loginStatus;
                     loggedIn = true;

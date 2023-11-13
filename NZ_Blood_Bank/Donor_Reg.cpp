@@ -89,7 +89,7 @@ string getUsername(nlohmann::ordered_json j) {
 	while (!isUnique) {
 		cout << "Enter a Username: " << endl;
 		cin >> str;
-		if (j.contains(str)) {
+		if (j["Donators"].contains(str)) {
 			system("cls");
 			cout << "Username taken!" << endl;
 		}
@@ -122,7 +122,7 @@ void Register() {
 	userStruct.prev_donation = getDate("Previous Donation date (fill out with \"0\" if no previous date)");
 	
 
-	Doc[userStruct.username] = {
+	Doc["Donators"][userStruct.username] = {
 		{"User_Info", {
 			{"First_Name", userStruct.firstName},
 			{"Last_Name", userStruct.lastName},
