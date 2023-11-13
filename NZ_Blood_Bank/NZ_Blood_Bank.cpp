@@ -6,6 +6,7 @@
 #include "intro_screen.h"
 #include "Recipient'sRegistration.h"
 #include "jsonManager.h"
+#include "admin_screen.h"
 
 
 int main()
@@ -15,8 +16,7 @@ int main()
 
     while (isRunning) {
         while (!loggedIn) { // does this if user is not logged in
-            system("cls");
-
+            json j = getUserdata();
             draw_intro();
 
             int userinput;
@@ -25,7 +25,10 @@ int main()
             if (userinput == 1) {
                 string loginStatus = LogIn();
                 
-                if (loginStatus != "exe.fail") {
+                if (j["ADMINS"].contains(loginStatus)) {
+                    admin_screen();
+                }
+                else if (loginStatus != "exe.fail") {
                     activeUser = loginStatus;
                     loggedIn = true;
                 }

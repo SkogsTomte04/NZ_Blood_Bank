@@ -7,6 +7,6 @@
 
 bool PasswordCheck(nlohmann::json, std::string);
 
-bool getLogin(nlohmann::json, std::string);
+bool getLogin(nlohmann::json, std::string, std::string);
 
 std::string LogIn();

@@ -7,6 +7,7 @@
 using namespace std;
 
 void draw_intro() {
+    system("cls");
     cout << colors::red << "===============================================" << colors::reset << endl;
     cout << colors::bright_red << "\tNew Zealand Blood Bank" << colors::reset << endl;
     cout << colors::bright_grey << "Welcome from the largest blood bank in NZ," << colors::reset << endl;

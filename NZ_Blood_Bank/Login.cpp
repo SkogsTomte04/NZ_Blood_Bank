@@ -4,21 +4,28 @@ using json = nlohmann::json;
 using namespace std;
 
 
-bool PasswordCheck(json j, string str) {
+bool PasswordCheck(json j, string str, string type) {
 	string password;
 	cout << "Password: ";
 	cin >> password;
-	
-	if (j["Donators"][str]["User_Info"]["Password"] == password) {
-		return true;
+	if (type == "donator") {
+		if (j["Donators"][str]["User_Info"]["Password"] == password) {
+			return true;
+		}
 	}
+	if (type == "admin") {
+		if (j["ADMINS"][str]["Password"] == password) {
+			return true;
+		}
+	}
+	
 	else { return false; }
 }
 
 bool getLogin(json j, string usr) {
 	if (j["Donators"].contains(usr)) {
 
-		if (PasswordCheck(j, usr)) {
+		if (PasswordCheck(j, usr, "donor")) {
 			return true;
 		}
 		else {
@@ -29,7 +36,15 @@ bool getLogin(json j, string usr) {
 		}
 	}
 	else if (j["ADMINS"].contains(usr)) {
-
+		if (PasswordCheck(j, usr, "admin")) {
+			return true;
+		}
+		else {
+			cout << "Incorrect Password" << endl;
+			system("pause");
+			system("cls");
+			return false;
+		}
 	}
 	else {
 		cout << "Username not found!" << endl;
