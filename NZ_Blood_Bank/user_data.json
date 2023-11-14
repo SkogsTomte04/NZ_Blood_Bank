@@ -138,6 +138,33 @@
                 "Full name": "William Moller",
                 "Hospital/Bloodbank": "Swedbank"
             }
+        },
+        "________________________________": {
+            "User_Info": {
+                "Full name": "________________________________",
+                "Hospital/Bloodbank": "bank",
+                "Adress": "2444 auckland",
+                "Email": "blalb@gmail.com",
+                "Contact_no": "07348567"
+            }
+        },
+        "quandus_maximus_bumbus": {
+            "User_Info": {
+                "Full name": "quandus_maximus_bumbus",
+                "Hospital/Bloodbank": "bs",
+                "Adress": "rg",
+                "Email": "r",
+                "Contact_no": "2456"
+            }
+        },
+        "Bomba_clat_rasclat": {
+            "User_Info": {
+                "Full name": "Bomba clat rasclat",
+                "Hospital/Bloodbank": "tge",
+                "Adress": "wtg",
+                "Email": "gwt",
+                "Contact_no": "36546"
+            }
         }
     }
 }

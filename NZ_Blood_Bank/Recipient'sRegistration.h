@@ -10,6 +10,7 @@ using json = nlohmann::ordered_json;
 void patient_details() {
 	json j_User = getUserdata();
 	
+	std::string id;
 	std::string fullname;
 	std::string hospitalname;
 	std::string address;
@@ -34,7 +35,10 @@ void patient_details() {
 	std::cout << "Type your contact number: ";
 	getline(std::cin, contactnumber);
 
-	j_User["Recipiants"][fullname]["User_Info"] = { {"Full name", fullname},{"Hospital/Bloodbank", hospitalname}, {"Adress", address}, {"Email", email}, {"Contact_no", contactnumber} };
+	id = fullname;
+	std::replace(id.begin(), id.end(), ' ', '_');
+
+	j_User["Recipiants"][id]["User_Info"] = { {"Full name", fullname},{"Hospital/Bloodbank", hospitalname}, {"Adress", address}, {"Email", email}, {"Contact_no", contactnumber} };
 
 	system("cls");
 

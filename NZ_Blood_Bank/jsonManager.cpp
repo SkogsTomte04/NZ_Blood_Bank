@@ -3,9 +3,6 @@
 using namespace std;
 using json = nlohmann::ordered_json;
 
-void printUser(json j, string user, string type) {
-	cout << j[type][user];
-}
 
 void updateJson(json j, string filepath) {
 	fstream file;
