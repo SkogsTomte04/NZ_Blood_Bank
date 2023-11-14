@@ -6,11 +6,15 @@
 
 using namespace std;
 
+void editUser() {
+
+}
+
 void Bloodtype(json j) { // this needs a lot of work
     string input;
 
     cout << "Enter Blood Group: ";
-    cin >> input;
+    std::cin >> input;
 
     for (auto it = j["Donators"].begin(); it != j["Donators"].end(); ++it)
     {
@@ -26,7 +30,7 @@ void findUser(json j, string type) { // "type" is either "Donators" or "Recipian
     cout << colors::bright_grey << "Input the " << type << "'s name to view their information." << colors::reset << endl;
     cout << colors::white << "\nAnswer: " << colors::green;
 
-    cin >> input;
+    std::cin >> input;
     system("cls");
     if (j[type].contains(input)) {
         cout << j[type][input].dump(4);
@@ -42,15 +46,16 @@ void printUsers(json j, string type) { // prints all users of type "Donators" or
 
     findUser(j, type);
 }
-int printMenu(string user, int screen) {
+int printMenu(int screen) {
     int userInput;
+    string str;
 
     switch (screen) {
     case 1:
         cout << colors::red << "\n====================================================" << colors::reset << endl;
         cout << colors::bright_red << "\t     New Zealand Blood Bank" << colors::reset << endl;
         cout << endl;
-        cout << colors::bright_grey << user << ", welcome back! You have been sent to this screen" << colors::reset << endl;
+        cout << colors::bright_grey << "Welcome back! You have been sent to this screen" << colors::reset << endl;
         cout << colors::bright_grey << "because the system recognized you as an admin." << colors::reset << endl;
         cout << colors::bright_grey << "Below, you have the ability to view or edit the info." << colors::reset << endl;
         cout << endl;
@@ -61,8 +66,7 @@ int printMenu(string user, int screen) {
         cout << colors::red << "====================================================" << colors::reset << endl;
         cout << colors::white << "\nAnswer: " << colors::green;
 
-        cin >> userInput;
-        return userInput;
+        break;
     case 2:
         cout << colors::bright_red << "\n[!] " << colors::bright_grey << "You choosed View Information/Update." << colors::reset << endl;
         cout << colors::bright_grey << "Enter your answer from (1-2): " << colors::reset << endl;
@@ -70,11 +74,15 @@ int printMenu(string user, int screen) {
         cout << colors::white << "2. Donator Information" << colors::reset << endl;
         cout << colors::white << "3. Find users by bloodtype" << colors::reset << endl;
         cout << colors::white << "\nAnswer: " << colors::green;
-        cin >> userInput;
-        return userInput;
+        break;
+    case 3:
+        cout << colors::bright_red << "\n[!] " << colors::bright_grey << "You choosed Update Reports." << colors::reset << endl;
+        cout << colors::bright_grey << "Input the donators's name to update the blood testing report." << colors::reset << endl;
+        cout << colors::white << "\nAnswer: " << colors::green;
+        return 0;
     }
-
-    
+    std::cin >> userInput;
+    return userInput;
 }
 
 void admin_screen(string user)
@@ -85,10 +93,10 @@ void admin_screen(string user)
     bool adminStatus = true;
 
     while (adminStatus) {
-        menuInput = printMenu(user, 1);
+        menuInput = printMenu(1);
 
         if (menuInput == 1) {
-            int userInput = printMenu(user, 2);
+            int userInput = printMenu(2);
             
             switch (userInput) {
             case 1:
@@ -109,19 +117,18 @@ void admin_screen(string user)
             }
         }
         if (menuInput == 2) {
-            cout << colors::bright_red << "\n[!] " << colors::bright_grey << "You choosed Update Reports." << colors::reset << endl;
-            cout << colors::bright_grey << "Input the donators's name to update the blood testing report." << colors::reset << endl;
-            cout << colors::white << "\nAnswer: " << colors::green;
-            cin >> menuInput;
+            string input;
+            printMenu(3);
+            std::cin >> input;
 
-            cout << "\n" << colors::white << "fvjfhvbaljfhvbalfjhvb" << colors::reset << endl;
-            cout << colors::white << "1. " << colors::bright_grey << "Jezner Jeymz M. Leonidas" << ", " << "O" << ", " << "Auckland, City" << colors::reset << endl;
+
         }
         if (menuInput == 3) {
             break;
         }
-        else if (cin.fail()) {
+        else if (std::cin.fail()) {
             cout << colors::red << "\n/!\\ " << colors::white << "Error: Invalid Number!" << colors::reset << endl;
         }
+        system("cls");
     }
 }
