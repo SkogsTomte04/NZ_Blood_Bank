@@ -6,6 +6,13 @@
 
 using namespace std;
 
+void Bloodtype(json j) { // this needs a lot of work
+    for (auto it = j["Donators"].begin(); it != j["Donators"].end(); ++it)
+    {
+        cout << *it << endl;
+    }
+}
+
 void findUser(json j, string type) { // "type" is either "Donators" or "Recipiants"
     string input;
     
@@ -59,6 +66,7 @@ void admin_screen(string user)
         cout << colors::bright_grey << "Enter your answer from (1-2): " << colors::reset << endl;
         cout << colors::white << "1. Recipient Information" << colors::reset << endl;
         cout << colors::white << "2. Donator Information" << colors::reset << endl;
+        cout << colors::white << "3. Find users by bloodtype" << colors::reset << endl;
         cout << colors::white << "\nAnswer: " << colors::green;
         cin >> infoOptions;
 
@@ -70,6 +78,11 @@ void admin_screen(string user)
         if (infoOptions == 2) {
             printUsers(j_user, "Donators");
             
+            system("pause");
+        }
+        if (infoOptions == 3) {
+            Bloodtype(j_user);
+
             system("pause");
         }
         else if (cin.fail()) {

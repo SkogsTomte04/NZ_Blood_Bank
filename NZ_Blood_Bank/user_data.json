@@ -12,7 +12,7 @@
             },
             "User_Info": {
                 "Adress": "1",
-                "Blood_Group": "1",
+                "Blood_Group": "A+",
                 "Contact_no": "1",
                 "Email": "1",
                 "Ethnicity": "1",
@@ -52,7 +52,7 @@
             },
             "User_Info": {
                 "Adress": "armdogatan 42",
-                "Blood_Group": "+",
+                "Blood_Group": "A+",
                 "Contact_no": 732306558,
                 "DOB": {
                     "DD": 20,
