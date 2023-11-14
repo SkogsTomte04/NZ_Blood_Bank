@@ -11,7 +11,7 @@
 
 int main()
 {
-    bool isRunning = true, loggedIn = false;
+    bool isRunning = true, loggedIn = false, isAdmin = false;
     string activeUser;
 
     while (isRunning) {
@@ -26,7 +26,9 @@ int main()
                 string loginStatus = LogIn();
                 
                 if (j["ADMINS"].contains(loginStatus)) {
-                    admin_screen();
+                    activeUser = loginStatus;
+                    loggedIn = true;
+                    isAdmin = true;
                 }
                 else if (loginStatus != "exe.fail") {
                     activeUser = loginStatus;
@@ -52,14 +54,29 @@ int main()
             system("cls");
             int userinput;
             
-            cout << "1. Book appointment\n2. Log out" << endl;
-            cin >> userinput;
-            if (userinput == 1) {
-                DScreen();
-                BookAppointment(activeUser);
+            if (isAdmin) {
+                cout << "1. Sign in as admin\n2. Log out" << endl;
+                cin >> userinput;
+                if (userinput == 1) {
+                    admin_screen(activeUser);
+                }
+                if (userinput == 2) {
+                    loggedIn = false;
+                    isAdmin = false;
+                    break;
+                }
             }
-            if (userinput == 2) {
-                loggedIn = false;
+            else if (!isAdmin) {
+                cout << "1. Book appointment\n2. Log out" << endl;
+                cin >> userinput;
+                if (userinput == 1) {
+                    DScreen();
+                    BookAppointment(activeUser);
+                }
+                if (userinput == 2) {
+                    loggedIn = false;
+                    break;
+                }
             }
         }
     }
