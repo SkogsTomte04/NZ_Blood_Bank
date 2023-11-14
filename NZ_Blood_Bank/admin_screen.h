@@ -11,7 +11,7 @@ void findUser(json j, string type) { // "type" is either "Donators" or "Recipian
     cin >> input;
     system("cls");
     if (j[type].contains(input)) {
-        cout << j[type][input].dump(4)
+        cout << j[type][input].dump(4);
     }
     else {
         cout << "error: name not found";
@@ -24,6 +24,8 @@ void printRecevers(json j){
 
 void printDonators(json j) {
     cout << colors::bright_grey << j["Donators"].dump(4) << colors::reset;
+
+    findUser(j, "Donators");
 }
 
 void admin_screen(string user)
@@ -76,6 +78,7 @@ void admin_screen(string user)
             cin >> answer;*/
 
             printDonators(j_user);
+            
             cin >> answer;
         }
         if (cin.fail()) {
