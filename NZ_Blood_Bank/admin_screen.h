@@ -21,9 +21,28 @@ void editUser(json j, string str) {
     }
 }
 
-void Bloodtype(json j) { // this needs a lot of work
+void BloodBank(json j) {
+    int counter = 0;
     string input;
 
+    cout << "Enter Blood Bank: ";
+    std::cin >> input;
+
+    for (auto it = j["Recipiants"].begin(); it != j["Recipiants"].end(); ++it)
+    {
+        if (j["Recipiants"][it.key()]["User_Info"]["Hospital/Bloodbank"] == input) {
+            cout << colors::blue << it.key() << endl << colors::bright_grey << j["Recipiants"][it.key()].dump(4) << colors::reset << endl;
+            counter++;
+        }
+    }
+    if (counter == 0) {
+        cout << "No users found with Blood Bank \"" << input << "\"" << endl;
+    }
+}
+
+void Bloodtype(json j) { // this needs a lot of work
+    string input;
+    int counter = 0;
     cout << "Enter Blood Group: ";
     std::cin >> input;
 
@@ -31,7 +50,11 @@ void Bloodtype(json j) { // this needs a lot of work
     {
         if (j["Donators"][it.key()]["User_Info"]["Blood_Group"] == input) {
             cout << colors::blue << it.key() << endl << colors::bright_grey << j["Donators"][it.key()].dump(4) << colors::reset << endl;
+            counter++;
         }
+    }
+    if (counter == 0) {
+        cout << "No users found with Blood Group \"" << input << "\"" << endl;
     }
 }
 
@@ -122,6 +145,11 @@ void admin_screen(string user)
                 break;
             case 3:
                 Bloodtype(j_user);
+
+                system("pause");
+                break;
+            case 4:
+                BloodBank(j_user);
 
                 system("pause");
                 break;

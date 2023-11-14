@@ -32,7 +32,7 @@
             },
             "User_Info": {
                 "Adress": "244 Sunset road",
-                "Blood_Group": "O-",
+                "Blood_Group": "A+",
                 "Contact_no": "0732306558",
                 "Email": "williammoller321@gmail.com",
                 "Ethnicity": "White",
@@ -130,13 +130,13 @@
                 "Hospital/Bloodbank": "Swebank"
             }
         },
-        "William Moller": {
+        "William_Moller": {
             "User_Info": {
                 "Adress": "244 Sunset Road",
                 "Contact_no": "0732306558",
                 "Email": "williammoller321@gmail.com",
                 "Full name": "William Moller",
-                "Hospital/Bloodbank": "Swedbank"
+                "Hospital/Bloodbank": "Swebank"
             }
         },
         "________________________________": {
