@@ -6,8 +6,19 @@
 
 using namespace std;
 
-void editUser() {
-
+void editUser(json j, string str) {
+    string input;
+    if (j["Donators"].contains(str)) {
+        cout << "User: " << str << endl << "Blood Type: " << j["Donators"][str]["User_Info"]["Blood_Group"] << endl;
+        cout << "Enter new blood type: ";
+        cin >> input;
+        j["Donators"][str]["User_Info"]["Blood_Group"] = input;
+        updateJson(j, "user_data.json");
+    }
+    else {
+        cout << "Error: name not found" << endl;
+        system("pause");
+    }
 }
 
 void Bloodtype(json j) { // this needs a lot of work
@@ -87,12 +98,12 @@ int printMenu(int screen) {
 
 void admin_screen(string user)
 {
-    json j_user = getUserdata();
-    json j_schedule = getScheduledata();
     int menuInput;
     bool adminStatus = true;
 
     while (adminStatus) {
+        json j_user = getUserdata();
+        json j_schedule = getScheduledata();
         menuInput = printMenu(1);
 
         if (menuInput == 1) {
@@ -120,8 +131,7 @@ void admin_screen(string user)
             string input;
             printMenu(3);
             std::cin >> input;
-
-
+            editUser(j_user, input);
         }
         if (menuInput == 3) {
             break;
