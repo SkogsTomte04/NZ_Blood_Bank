@@ -8,6 +8,10 @@ using namespace std;
 
 void findUser(json j, string type) { // "type" is either "Donators" or "Recipiants"
     string input;
+    
+    cout << colors::bright_grey << "Input the " << type << "'s name to view their information." << colors::reset << endl;
+    cout << colors::white << "\nAnswer: " << colors::green;
+
     cin >> input;
     system("cls");
     if (j[type].contains(input)) {
@@ -15,17 +19,14 @@ void findUser(json j, string type) { // "type" is either "Donators" or "Recipian
     }
     else {
         cout << "error: name not found";
+        system("pause");
     }
 }
 
-void printRecevers(json j){
+void printUsers(json j, string type) { // prints all users of type "Donators" or "Recipiants" 
+    cout << colors::bright_grey << j[type].dump(4) << colors::reset << endl;
 
-}
-
-void printDonators(json j) {
-    cout << colors::bright_grey << j["Donators"].dump(4) << colors::reset;
-
-    findUser(j, "Donators");
+    findUser(j, type);
 }
 
 void admin_screen(string user)
@@ -62,31 +63,21 @@ void admin_screen(string user)
         cin >> infoOptions;
 
         if (infoOptions == 1) {
-            cout << colors::bright_red << "\n[!] " << colors::bright_grey << "You choosed Recipient Information." << colors::reset << endl;
-            cout << colors::bright_grey << "Input the recipient's name to view their information." << colors::reset << endl;
-            cout << colors::white << "\nAnswer: " << colors::green;
-            cin >> answer;
+            printUsers(j_user, "Recipiants");
 
-            cout << "\n" << colors::white << fakeVariable << colors::reset << endl;
-            cout << colors::white << "1. " << colors::bright_grey << "Jezner Jeymz M. Leonidas" << ", " << "O" << ", " << "Auckland, City" << colors::reset << endl;
-
+            system("pause");
         }
-        else if (infoOptions == 2) {
-            /*cout << colors::bright_red << "\n[!] " << colors::bright_grey << "You choosed Donator Information." << colors::reset << endl;
-            cout << colors::bright_grey << "Input the donator's name to view their information." << colors::reset << endl;
-            cout << colors::white << "\nAnswer: " << colors::green;
-            cin >> answer;*/
-
-            printDonators(j_user);
+        if (infoOptions == 2) {
+            printUsers(j_user, "Donators");
             
-            cin >> answer;
+            system("pause");
         }
-        if (cin.fail()) {
+        else if (cin.fail()) {
             cout << colors::red << "\n/!\\ " << colors::white << "Error: Invalid Number!" << colors::reset << endl;
 
         }
     }
-    else if (adminOptions == 2) {
+    if (adminOptions == 2) {
         cout << colors::bright_red << "\n[!] " << colors::bright_grey << "You choosed Update Reports." << colors::reset << endl;
         cout << colors::bright_grey << "Input the donators's name to update the blood testing report." << colors::reset << endl;
         cout << colors::white << "\nAnswer: " << colors::green;
@@ -95,7 +86,7 @@ void admin_screen(string user)
         cout << "\n" << colors::white << fakeVariable << colors::reset << endl;
         cout << colors::white << "1. " << colors::bright_grey << "Jezner Jeymz M. Leonidas" << ", " << "O" << ", " << "Auckland, City" << colors::reset << endl;
     }
-    if (cin.fail()) {
+    else if (cin.fail()) {
         cout << colors::red << "\n/!\\ " << colors::white << "Error: Invalid Number!" << colors::reset << endl;
     }
 }
