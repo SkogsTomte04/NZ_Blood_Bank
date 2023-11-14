@@ -3,7 +3,6 @@
 using namespace std;
 using json = nlohmann::ordered_json;
 
-
 void updateJson(json j, string filepath) {
 	fstream file;
 	file.open(filepath, std::ios::out);

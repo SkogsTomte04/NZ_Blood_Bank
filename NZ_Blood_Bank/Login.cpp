@@ -8,7 +8,7 @@ bool PasswordCheck(json j, string str, string type) {
 	string password;
 	cout << "Password: ";
 	cin >> password;
-	if (type == "donator") {
+	if (type == "Donator") {
 		if (j["Donators"][str]["User_Info"]["Password"] == password) {
 			return true;
 		}
@@ -25,7 +25,7 @@ bool PasswordCheck(json j, string str, string type) {
 bool getLogin(json j, string usr) {
 	if (j["Donators"].contains(usr)) {
 
-		if (PasswordCheck(j, usr, "donor")) {
+		if (PasswordCheck(j, usr, "Donator")) {
 			return true;
 		}
 		else {

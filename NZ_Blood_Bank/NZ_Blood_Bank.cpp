@@ -24,15 +24,17 @@ int main()
 
             if (userinput == 1) {
                 string loginStatus = LogIn();
-                
+
                 if (j["ADMINS"].contains(loginStatus)) {
                     activeUser = loginStatus;
                     loggedIn = true;
                     isAdmin = true;
+                    
                 }
                 else if (loginStatus != "exe.fail") {
                     activeUser = loginStatus;
                     loggedIn = true;
+                    
                 }
 
             }
@@ -50,34 +52,26 @@ int main()
 
         }
 
-        while (loggedIn) { // does this if user is logged in
+        while (loggedIn && !isAdmin) { // does this if user is logged in
             system("cls");
             int userinput;
-            
-            if (isAdmin) {
-                cout << "1. Sign in as admin\n2. Log out" << endl;
-                cin >> userinput;
-                if (userinput == 1) {
-                    admin_screen(activeUser);
-                }
-                if (userinput == 2) {
-                    loggedIn = false;
-                    isAdmin = false;
-                    break;
-                }
+
+            cout << "1. Book appointment\n2. Log out" << endl;
+            cin >> userinput;
+            if (userinput == 1) {
+                DScreen();
+                BookAppointment(activeUser);
             }
-            else if (!isAdmin) {
-                cout << "1. Book appointment\n2. Log out" << endl;
-                cin >> userinput;
-                if (userinput == 1) {
-                    DScreen();
-                    BookAppointment(activeUser);
-                }
-                if (userinput == 2) {
-                    loggedIn = false;
-                    break;
-                }
+            if (userinput == 2) {
+                loggedIn = false;
+                break;
             }
+        }
+        while (isAdmin) {
+            string input;
+            admin_screen(activeUser);
+            loggedIn = false;
+            isAdmin = false;
         }
     }
 }
