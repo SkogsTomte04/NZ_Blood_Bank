@@ -78,11 +78,15 @@ void findUser(json j, string type) { // "type" is either "Donators" or "Recipian
 }
 
 void printUsers(json j, string type) { // prints all users of type "Donators" or "Recipiants" 
-    cout << colors::bright_grey << j[type].dump(4) << colors::reset << endl;
+    /*cout << colors::bright_grey << j[type].dump(4) << colors::reset << endl;*/
+    for (auto it = j[type].begin(); it != j[type].end(); ++it)
+    {
+        printUser(j, it.key(), type);
+    }
 
     findUser(j, type);
 }
-int printMenu(int screen) {
+int printMenu(int screen) { // this is horrible why did i do this???
     int userInput;
     string str;
 
@@ -128,7 +132,6 @@ void admin_screen(string user)
 
     while (adminStatus) {
         json j_user = getUserdata();
-        json j_schedule = getScheduledata();
         menuInput = printMenu(1);
 
         if (menuInput == 1) {
@@ -155,6 +158,8 @@ void admin_screen(string user)
 
                 system("pause");
                 break;
+            default:
+                cout << "Error Out of range" << endl;
             }
         }
         if (menuInput == 2) {
