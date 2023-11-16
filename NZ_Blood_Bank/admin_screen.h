@@ -41,7 +41,7 @@ void BloodBank(json j) {
     }
 }
 
-void Bloodtype(json j) { // this needs a lot of work
+void Bloodtype(json j) {
     string input, tempStr;
     int counter = 0;
     cout << "Enter Blood Group: ";
