@@ -145,6 +145,38 @@
                 "Day": "N/A",
                 "Time": 0
             }
+        },
+        "NewTestUser": {
+            "User_Info": {
+                "First_Name": "User",
+                "Last_Name": "Test",
+                "DOB": [
+                    6,
+                    5,
+                    40
+                ],
+                "Nationality": "bla",
+                "Ethnicity": "lba",
+                "Medical": [
+                    "alergy",
+                    "blood poison",
+                    "lead poison"
+                ],
+                "Blood_Group": "O",
+                "Contact_no": "00004095245",
+                "Email": "WERGf@gmail.com",
+                "Adress": "243 SRSRE SV",
+                "Prev_Donation_Date": [
+                    0,
+                    0,
+                    0
+                ],
+                "Password": "test"
+            },
+            "Appointment_Date": {
+                "Day": "N/A",
+                "Time": 0
+            }
         }
     },
     "Recipiants": {

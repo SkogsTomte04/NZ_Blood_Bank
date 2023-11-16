@@ -15,7 +15,7 @@ struct User
 	string ethnicity;
 	vector<string> medical;
 	string bloodGroup;
-	long int contact;
+	string contact;
 	string email;
 	string adress;
 	array<int, 3> prev_donation;
@@ -117,7 +117,7 @@ void Register() {
 	userStruct.ethnicity = getString("Ethnicity");
 	userStruct.medical = getVector("Medical record");
 	userStruct.bloodGroup = getString("Blood Group");
-	userStruct.contact = getInt("Contact Number");
+	userStruct.contact = getString("Contact Number");
 	userStruct.email = getString("Email");
 	userStruct.adress = getString("Adress");
 	userStruct.prev_donation = getDate("Previous Donation date (fill out with \"0\" if no previous date)");
@@ -127,13 +127,14 @@ void Register() {
 		{"User_Info", {
 			{"First_Name", userStruct.firstName},
 			{"Last_Name", userStruct.lastName},
-			{"DOB", {
+			{"DOB", userStruct.DOB/*{
 				{"DD", userStruct.DOB[0]},
 				{"MM", userStruct.DOB[1]},
 				{"YY", userStruct.DOB[2]}
-			}},
+			}*/},
 			{"Nationality", userStruct.nationality},
 			{"Ethnicity", userStruct.ethnicity},
+			{"Medical", userStruct.medical},
 			{"Blood_Group", userStruct.bloodGroup},
 			{"Contact_no", userStruct.contact},
 			{"Email", userStruct.email},
