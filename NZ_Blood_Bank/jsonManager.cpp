@@ -3,7 +3,7 @@
 using namespace std;
 using json = nlohmann::ordered_json;
 
-void printUser(json j, string username) {
+void printUser(json j, string username) { // might want to be able to print recipiants too
     string tempStr;
     cout << colors::white << username << colors::reset << endl;
     
