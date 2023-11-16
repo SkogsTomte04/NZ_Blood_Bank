@@ -2,6 +2,7 @@
 #include <iostream>
 #include <fstream>
 #include <string>
+#include "jsonManager.h"
 #include "colors.hpp"
 
 using namespace std;
@@ -41,7 +42,7 @@ void BloodBank(json j) {
 }
 
 void Bloodtype(json j) { // this needs a lot of work
-    string input;
+    string input, tempStr;
     int counter = 0;
     cout << "Enter Blood Group: ";
     std::cin >> input;
@@ -49,7 +50,7 @@ void Bloodtype(json j) { // this needs a lot of work
     for (auto it = j["Donators"].begin(); it != j["Donators"].end(); ++it)
     {
         if (j["Donators"][it.key()]["User_Info"]["Blood_Group"] == input) {
-            cout << colors::blue << it.key() << endl << colors::bright_grey << j["Donators"][it.key()].dump(4) << colors::reset << endl;
+            printUser(j, it.key());
             counter++;
         }
     }
@@ -67,7 +68,8 @@ void findUser(json j, string type) { // "type" is either "Donators" or "Recipian
     std::cin >> input;
     system("cls");
     if (j[type].contains(input)) {
-        cout << j[type][input].dump(4);
+        /*cout << j[type][input].dump(4);*/
+        printUser(j, input);
     }
     else {
         cout << "error: name not found";

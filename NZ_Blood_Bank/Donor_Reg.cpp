@@ -89,6 +89,7 @@ string getUsername(nlohmann::ordered_json j) {
 	while (!isUnique) {
 		cout << "Enter a Username: " << endl;
 		cin >> str;
+		cin.ignore();
 		if (j["Donators"].contains(str)) {
 			system("cls");
 			cout << "Username taken!" << endl;

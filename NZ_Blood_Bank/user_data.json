@@ -118,6 +118,33 @@
                     4
                 ]
             }
+        },
+        "NewUser": {
+            "User_Info": {
+                "First_Name": "New",
+                "Last_Name": "User",
+                "DOB": {
+                    "DD": 20,
+                    "MM": 4,
+                    "YY": 4
+                },
+                "Nationality": "German",
+                "Ethnicity": "irellevant",
+                "Blood_Group": "A+",
+                "Contact_no": 732396558,
+                "Email": "NewUser@gmail.com",
+                "Adress": "USERADRESS",
+                "Prev_Donation_Date": [
+                    0,
+                    0,
+                    0
+                ],
+                "Password": "1"
+            },
+            "Appointment_Date": {
+                "Day": "N/A",
+                "Time": 0
+            }
         }
     },
     "Recipiants": {
