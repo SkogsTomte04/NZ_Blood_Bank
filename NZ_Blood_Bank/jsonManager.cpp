@@ -3,23 +3,23 @@
 using namespace std;
 using json = nlohmann::ordered_json;
 
-void printUser(json j, string username) { // might want to be able to print recipiants too
-    string tempStr;
-    cout << colors::white << username << colors::reset << endl;
-    
-    for (auto it = j["Donators"][username].begin(); it != j["Donators"][username].end(); it++) {
-        cout << " " << colors::red << it.key() << endl;
-        for (auto it2 = j["Donators"][username][it.key()].begin(); it2 != j["Donators"][username][it.key()].end(); ++it2) {
+void printUser(json j, string username, string type) { // might want to be able to print recipiants too
+    string str, tempStr;
+    std::cout << colors::white << username << colors::reset << endl;
+
+    for (auto it = j[type][username].begin(); it != j[type][username].end(); it++) {
+        std::cout << " " << colors::red << it.key() << endl;
+        for (auto it2 = j[type][username][it.key()].begin(); it2 != j[type][username][it.key()].end(); ++it2) {
             if (it2.value().is_string()) { // check if iterator value is a string
                 tempStr = it2.value(); // assign string to temporary variable 
-                cout << "  " << colors::yellow << it2.key() << ": " << colors::bright_grey << tempStr << colors::reset << endl; // print value and key
+                std::cout << "  " << colors::yellow << it2.key() << ": " << colors::bright_grey << tempStr << colors::reset << endl; // print value and key
             }
             else { // if value is not string: print out value without temporary variable
-                cout << "  " << colors::yellow << it2.key() << ": " << colors::bright_grey << it2.value() << colors::reset << endl;
+                std::cout << "  " << colors::yellow << it2.key() << ": " << colors::bright_grey << it2.value() << colors::reset << endl;
             }
         }
     }
-    cout << endl;
+    std::cout << endl;
 }
 
 void updateJson(json j, string filepath) {

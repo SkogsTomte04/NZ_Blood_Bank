@@ -192,6 +192,15 @@
                 "Email": "gwt",
                 "Contact_no": "36546"
             }
+        },
+        "Hatsune_Miku": {
+            "User_Info": {
+                "Full name": "Hatsune Miku",
+                "Hospital/Bloodbank": "VocaloidMD",
+                "Adress": "420 hidinginyourwifi",
+                "Email": "Hatsune.Miku@gsnail.nz.gov",
+                "Contact_no": "85603984567"
+            }
         }
     }
 }

@@ -50,7 +50,7 @@ void Bloodtype(json j) {
     for (auto it = j["Donators"].begin(); it != j["Donators"].end(); ++it)
     {
         if (j["Donators"][it.key()]["User_Info"]["Blood_Group"] == input) {
-            printUser(j, it.key());
+            printUser(j, it.key(), "Donators");
             counter++;
         }
     }
@@ -69,7 +69,7 @@ void findUser(json j, string type) { // "type" is either "Donators" or "Recipian
     system("cls");
     if (j[type].contains(input)) {
         /*cout << j[type][input].dump(4);*/
-        printUser(j, input);
+        printUser(j, input, type);
     }
     else {
         cout << "error: name not found";
