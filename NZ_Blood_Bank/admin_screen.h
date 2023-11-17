@@ -7,6 +7,18 @@
 
 using namespace std;
 
+bool isValidBloodType(string str) {
+    string bloodTypes[8] = { "A+", "A-", "B+", "B-", "AB+", "AB-", "O+", "O-" };
+    
+    for (int i = 0; i < size(bloodTypes); i++) {
+        if (bloodTypes[i] == str) {
+            return true;
+        }
+    }
+    cout << "Error: Invalid Blood Type" << endl;
+    return false;
+}
+
 void editUser(json j, string str) {
     string input;
     if (j["Donators"].contains(str)) {
@@ -32,7 +44,7 @@ void BloodBank(json j) {
     for (auto it = j["Recipiants"].begin(); it != j["Recipiants"].end(); ++it)
     {
         if (j["Recipiants"][it.key()]["User_Info"]["Hospital/Bloodbank"] == input) {
-            cout << colors::blue << it.key() << endl << colors::bright_grey << j["Recipiants"][it.key()].dump(4) << colors::reset << endl;
+            printUser(j, it.key(), "Recipiants");
             counter++;
         }
     }
@@ -44,9 +56,12 @@ void BloodBank(json j) {
 void Bloodtype(json j) {
     string input, tempStr;
     int counter = 0;
-    cout << "Enter Blood Group: ";
-    std::cin >> input;
-
+    
+    do {
+        cout << "Enter Blood Group: ";
+        std::cin >> input;
+    } while (!isValidBloodType(input));
+    
     for (auto it = j["Donators"].begin(); it != j["Donators"].end(); ++it)
     {
         if (j["Donators"][it.key()]["User_Info"]["Blood_Group"] == input) {
@@ -68,7 +83,6 @@ void findUser(json j, string type) { // "type" is either "Donators" or "Recipian
     std::cin >> input;
     system("cls");
     if (j[type].contains(input)) {
-        /*cout << j[type][input].dump(4);*/
         printUser(j, input, type);
     }
     else {
@@ -77,14 +91,23 @@ void findUser(json j, string type) { // "type" is either "Donators" or "Recipian
     }
 }
 
-void printUsers(json j, string type) { // prints all users of type "Donators" or "Recipiants" 
-    /*cout << colors::bright_grey << j[type].dump(4) << colors::reset << endl;*/
+void printAllUsers(json j, string type) { // prints all users of type "Donators" or "Recipiants" 
+    int userinput;
     for (auto it = j[type].begin(); it != j[type].end(); ++it)
     {
         printUser(j, it.key(), type);
     }
+    cout << "1. Search for a user\n2. Quit" << endl;
+    cin >> userinput;
 
-    findUser(j, type);
+    switch (userinput) {
+    case 1:
+        findUser(j, type);
+        break;
+    case 2:
+        return;
+    }
+    
 }
 int printMenu(int screen) { // this is horrible why did i do this???
     int userInput;
@@ -112,7 +135,8 @@ int printMenu(int screen) { // this is horrible why did i do this???
         cout << colors::bright_grey << "Enter your answer from (1-2): " << colors::reset << endl;
         cout << colors::white << "1. Recipient Information" << colors::reset << endl;
         cout << colors::white << "2. Donator Information" << colors::reset << endl;
-        cout << colors::white << "3. Find users by bloodtype" << colors::reset << endl;
+        cout << colors::white << "3. Find users by Blood Type" << colors::reset << endl;
+        cout << colors::white << "4. Find users by Blood Bank" << colors::reset << endl;
         cout << colors::white << "\nAnswer: " << colors::green;
         break;
     case 3:
@@ -139,12 +163,12 @@ void admin_screen(string user)
             
             switch (userInput) {
             case 1:
-                printUsers(j_user, "Recipiants");
+                printAllUsers(j_user, "Recipiants");
 
                 system("pause");
                 break;
             case 2:
-                printUsers(j_user, "Donators");
+                printAllUsers(j_user, "Donators");
 
                 system("pause");
                 break;

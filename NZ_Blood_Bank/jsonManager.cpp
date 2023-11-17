@@ -11,7 +11,7 @@ void printUser(json j, string username, string type) { // might want to be able 
     std::cout << colors::green << " ]" << colors::reset << endl;
 
     for (auto it = j[type][username].begin(); it != j[type][username].end(); it++) {
-        std::cout << " | " << colors::red << it.key() << colors::reset << endl;
+        std::cout << " | " << colors::bright_red << it.key() << colors::reset << endl;
         for (auto it2 = j[type][username][it.key()].begin(); it2 != j[type][username][it.key()].end(); ++it2) {
             if (it2.value().is_string()) { // check if iterator value is a string
                 tempStr = it2.value(); // assign string to temporary variable 

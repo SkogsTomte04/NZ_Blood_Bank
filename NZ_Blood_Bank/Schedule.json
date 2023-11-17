@@ -3,7 +3,7 @@
         "Monday": {
             "9": "1",
             "10": "ASwellDude",
-            "11": "1",
+            "11": "Available",
             "12": "Available",
             "13": "Available",
             "14": "Available",
@@ -23,7 +23,7 @@
         "Wednesday": {
             "9": "Available",
             "10": "Available",
-            "11": "Available",
+            "11": "1",
             "12": "Available",
             "13": "Available",
             "14": "Available",
@@ -54,7 +54,7 @@
     "Clients": {
         "Donation": {
             "1": {
-                "Day": "Monday",
+                "Day": "Wednesday",
                 "Time": "11"
             },
             "ASwellDude": {
