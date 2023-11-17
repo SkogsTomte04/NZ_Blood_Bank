@@ -39,7 +39,12 @@ int main()
 
             }
             if (userinput == 2) {
-                cout << "Donate or receive?\n\n1. Donate\n2. Receive" << endl;
+                cout << colors::bright_red << "\n[!] " << colors::bright_grey << "You choosed Register." << colors::reset << endl;
+                cout << colors::bright_grey << "Please indicate if you are donating or receiving blood before continuing." << colors::reset << endl;
+                cout << colors::bright_grey << "Enter your answer from (1-2): " << colors::reset << endl;
+                cout << colors::white << "1. Donate" << colors::reset << endl;
+                cout << colors::white << "2. Receive" << colors::reset << endl;
+                cout << colors::white << "\nAnswer: " << colors::green;
                 cin >> userinput;
                 cin.ignore();
                 if (userinput == 1) {
@@ -56,7 +61,11 @@ int main()
             system("cls");
             int userinput;
 
-            cout << "1. Book appointment\n2. Log out" << endl;
+            cout << colors::bright_red << "[!] " << colors::bright_grey << "Login successful." << colors::reset << endl;
+            cout << colors::bright_grey << "Enter your answer from (1-2): " << colors::reset << endl;
+            cout << colors::white << "1. Book Appointment" << colors::reset << endl;
+            cout << colors::white << "2. Log Out" << colors::reset << endl;
+            cout << colors::white << "\nAnswer: " << colors::green;
             cin >> userinput;
             if (userinput == 1) {
                 DScreen();

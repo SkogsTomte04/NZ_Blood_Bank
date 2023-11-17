@@ -1,5 +1,6 @@
 #include "Donor_Reg.h"
 #include "jsonManager.h"
+#include "colors.hpp"
 
 
 using json = nlohmann::ordered_json;
@@ -87,12 +88,14 @@ string getUsername(nlohmann::ordered_json j) {
 	bool isUnique = false;
 	string str;
 	while (!isUnique) {
-		cout << "Enter a Username: " << endl;
+		cout << colors::bright_red << "\n[!] " << colors::bright_grey << "You choosed Donate." << colors::reset << endl;
+		cout << colors::bright_grey << "Enter a Username:" << colors::reset << endl;
+		cout << colors::white << "\nAnswer: " << colors::green;
 		cin >> str;
 		cin.ignore();
 		if (j["Donators"].contains(str)) {
 			system("cls");
-			cout << "Username taken!" << endl;
+			cout << colors::red << "\n/!\\ " << colors::white << "Error: Username taken!" << colors::reset << endl;
 		}
 		else {
 			system("cls");
