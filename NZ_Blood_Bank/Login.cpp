@@ -1,4 +1,5 @@
 #include "LogIn.h"
+#include "colors.hpp"
 
 using json = nlohmann::json;
 using namespace std;
@@ -6,7 +7,7 @@ using namespace std;
 
 bool PasswordCheck(json j, string str, string type) {
 	string password;
-	cout << "Password: ";
+	cout << colors::white << "Password: " << colors::green;
 	cin >> password;
 	if (type == "Donator") {
 		if (j["Donators"][str]["User_Info"]["Password"] == password) {
@@ -29,7 +30,7 @@ bool getLogin(json j, string usr) {
 			return true;
 		}
 		else {
-			cout << "Incorrect Password" << endl;
+			cout << colors::red << "\n/!\\ " << colors::white << "Error: Incorrect Password!" << colors::reset << endl;
 			system("pause");
 			system("cls");
 			return false;
@@ -40,14 +41,14 @@ bool getLogin(json j, string usr) {
 			return true;
 		}
 		else {
-			cout << "Incorrect Password" << endl;
+			cout << colors::red << "\n/!\\ " << colors::white << "Error: Incorrect Password!" << colors::reset << endl;
 			system("pause");
 			system("cls");
 			return false;
 		}
 	}
 	else {
-		cout << "Username not found!" << endl;
+		cout << colors::red << "\n/!\\ " << colors::white << "Error: Incorrect Password!" << colors::reset << endl;
 		system("pause");
 		system("cls");
 		return false;
@@ -61,7 +62,8 @@ string LogIn() {
 	json Doc = json::parse(in);
 
 	string username;
-	cout << "UserName: ";
+	cout << colors::bright_red << "[!] " << colors::bright_grey << "You choosed Login." << colors::reset << endl;
+	cout << colors::white << "Username: " << colors::green;
 
 	cin >> username;
 

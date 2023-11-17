@@ -17,7 +17,7 @@ void editUser(json j, string str) {
         updateJson(j, "user_data.json");
     }
     else {
-        cout << "Error: name not found" << endl;
+        cout << colors::red << "\n/!\\ " << colors::white << "Error: No name found!" << colors::reset << endl;
         system("pause");
     }
 }
@@ -37,7 +37,7 @@ void BloodBank(json j) {
         }
     }
     if (counter == 0) {
-        cout << "No users found with Blood Bank \"" << input << "\"" << endl;
+        cout << colors::red << "\n/!\\ " << colors::white << "Error: " << colors::bright_red << input << colors::white << " is not registered with the NZ Blood Bank, so they cannot be found." << colors::reset << endl;
     }
 }
 
@@ -55,7 +55,7 @@ void Bloodtype(json j) {
         }
     }
     if (counter == 0) {
-        cout << "No users found with Blood Group \"" << input << "\"" << endl;
+        cout << colors::red << "\n/!\\ " << colors::white << "Error: " << colors::bright_red << input << colors::white << " is not registered with the NZ Blood Bank, so they cannot be found." << colors::reset << endl;
     }
 }
 
@@ -72,7 +72,7 @@ void findUser(json j, string type) { // "type" is either "Donators" or "Recipian
         printUser(j, input, type);
     }
     else {
-        cout << "error: name not found";
+        cout << colors::red << "\n/!\\ " << colors::white << "Error: No name found!" << colors::reset << endl;
         system("pause");
     }
 }
@@ -92,7 +92,7 @@ int printMenu(int screen) { // this is horrible why did i do this???
 
     switch (screen) {
     case 1:
-        cout << colors::red << "\n====================================================" << colors::reset << endl;
+        cout << colors::red << "\n----------------------------------------------------" << colors::reset << endl;
         cout << colors::bright_red << "\t     New Zealand Blood Bank" << colors::reset << endl;
         cout << endl;
         cout << colors::bright_grey << "Welcome back! You have been sent to this screen" << colors::reset << endl;
@@ -103,7 +103,7 @@ int printMenu(int screen) { // this is horrible why did i do this???
         cout << colors::white << "\t     1. View Information" << colors::reset << endl;
         cout << colors::white << "\t      2. Update Reports" << colors::reset << endl;
         cout << colors::white << "\t      3. Quit" << colors::reset << endl;
-        cout << colors::red << "====================================================" << colors::reset << endl;
+        cout << colors::red << "----------------------------------------------------" << colors::reset << endl;
         cout << colors::white << "\nAnswer: " << colors::green;
 
         break;
@@ -159,7 +159,7 @@ void admin_screen(string user)
                 system("pause");
                 break;
             default:
-                cout << "Error Out of range" << endl;
+                cout << colors::red << "\n/!\\ " << colors::white << "Error: Out of range!" << colors::reset << endl;
             }
         }
         if (menuInput == 2) {
