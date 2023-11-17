@@ -48,7 +48,7 @@ bool getLogin(json j, string usr) {
 		}
 	}
 	else {
-		cout << colors::red << "\n/!\\ " << colors::white << "Error: Incorrect Password!" << colors::reset << endl;
+		cout << colors::red << "\n/!\\ " << colors::white << "Error: Username not found!" << colors::reset << endl;
 		system("pause");
 		system("cls");
 		return false;
