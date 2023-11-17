@@ -2,9 +2,9 @@
     "Days": {
         "Monday": {
             "9": "1",
-            "10": "ASwellDude",
+            "10": "Available",
             "11": "Available",
-            "12": "Available",
+            "12": "NewUser",
             "13": "Available",
             "14": "Available",
             "15": "Available",
@@ -12,7 +12,7 @@
         },
         "Tuesday": {
             "9": "Available",
-            "10": "Available",
+            "10": "Miltonios",
             "11": "Available",
             "12": "Available",
             "13": "Available",
@@ -25,14 +25,14 @@
             "10": "Available",
             "11": "1",
             "12": "Available",
-            "13": "Available",
+            "13": "Lopton",
             "14": "Available",
             "15": "Available",
             "16": "Available"
         },
         "Thursday": {
             "9": "Available",
-            "10": "Available",
+            "10": "ASwellDude",
             "11": "Available",
             "12": "Available",
             "13": "Available",
@@ -58,8 +58,20 @@
                 "Time": "11"
             },
             "ASwellDude": {
-                "Day": "Monday",
+                "Day": "Thursday",
                 "Time": "10"
+            },
+            "Lopton": {
+                "Day": "Wednesday",
+                "Time": "13"
+            },
+            "Miltonios": {
+                "Day": "Tuesday",
+                "Time": "10"
+            },
+            "NewUser": {
+                "Day": "Monday",
+                "Time": "12"
             }
         }
     }

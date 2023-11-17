@@ -27,7 +27,7 @@
         },
         "ASwellDude": {
             "Appointment_Date": {
-                "Day": "Monday",
+                "Day": "Thursday",
                 "Time": 10
             },
             "User_Info": {
@@ -47,8 +47,8 @@
         },
         "Lopton": {
             "Appointment_Date": {
-                "Day": "N/A",
-                "Time": 0
+                "Day": "Wednesday",
+                "Time": 13
             },
             "User_Info": {
                 "Adress": "armdogatan 42",
@@ -74,8 +74,8 @@
         },
         "Miltonios": {
             "Appointment_Date": {
-                "Day": "Monday",
-                "Time": 9
+                "Day": "Tuesday",
+                "Time": 10
             },
             "User_Info": {
                 "Adress": "244 Sunset Road",
@@ -99,7 +99,7 @@
             },
             "User_Info": {
                 "Adress": "ttt",
-                "Blood_Group": "O",
+                "Blood_Group": "O-",
                 "Contact_no": 4567,
                 "DOB": {
                     "DD": 0,
@@ -142,8 +142,8 @@
                 "Password": "1"
             },
             "Appointment_Date": {
-                "Day": "N/A",
-                "Time": 0
+                "Day": "Monday",
+                "Time": 12
             }
         },
         "NewTestUser": {
