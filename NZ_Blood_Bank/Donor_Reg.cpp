@@ -26,23 +26,23 @@ struct User
 
 string getString(string category) {
 	string str;
-	cout << category << ": " << endl;
+	cout << colors::bright_grey << "\nEnter a " << category << ": " << colors::reset << endl;
+	cout << colors::white << "\nAnswer: " << colors::green;
 
 	//cin.ignore();
 	getline(cin, str);
 
-	system("cls");
 	return str;
 }
 
 long int getInt(string category) {
 	long int i;
-	cout << category << ": ";
+	cout << colors::bright_grey << "\nEnter a " << category << ": " << colors::reset << endl;
+	cout << colors::white << "\nAnswer: " << colors::green;
 
 	cin >> i;
 
 	cin.ignore();
-	system("cls");
 	return i;
 }
 
@@ -74,13 +74,15 @@ std::array <int,3> getDate(string category) {
 	string dmy[3] = {"Day (DD)", "Month (MM)", "Year (YY)"};
 	array <int, 3> date;
 	
-	cout << category << endl;
+	cout << endl << colors::bright_red << category << colors::reset << endl;
+	cout << colors::bright_grey << "For example, you can put 01 for DD, which stands for the first day of the month, \n" << colors::reset;
+    cout << colors::bright_grey << "08 for MM, meaning the month of August, and 24 for YY, meaning the year 2024.\n" << colors::reset;
 	for (int i = 0; i < size(date); i++) {
-		cout << dmy[i] << ": ";
+		cout << colors::bright_grey << "\nEnter a " << dmy[i] << ": " << endl;
+		cout << colors::white << "\nAnswer: " << colors::green;
 		cin >> date[i];
 	}
 	cin.ignore();
-	system("cls");
 	return date;
 }
 
@@ -98,7 +100,6 @@ string getUsername(nlohmann::ordered_json j) {
 			cout << colors::red << "\n/!\\ " << colors::white << "Error: Username taken!" << colors::reset << endl;
 		}
 		else {
-			system("cls");
 			return str;
 		}
 	}
@@ -115,7 +116,7 @@ void Register() {
 	userStruct.password = getString("Password");
 	userStruct.firstName = getString("First name");
 	userStruct.lastName = getString("Last name");
-	userStruct.DOB = getDate("Date of birth");
+	userStruct.DOB = getDate("Date of Birth");
 	userStruct.nationality = getString("Nationality");
 	userStruct.ethnicity = getString("Ethnicity");
 	userStruct.medical = getVector("Medical record");
