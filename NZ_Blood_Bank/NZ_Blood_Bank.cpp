@@ -61,6 +61,8 @@ int main()
             system("cls");
             int userinput;
 
+            printUser(getUserdata(), activeUser, "Donators");
+
             cout << colors::bright_red << "[!] " << colors::bright_grey << "Login successful." << colors::reset << endl;
             cout << colors::bright_grey << "Enter your answer from (1-2): " << colors::reset << endl;
             cout << colors::white << "1. Book Appointment" << colors::reset << endl;
