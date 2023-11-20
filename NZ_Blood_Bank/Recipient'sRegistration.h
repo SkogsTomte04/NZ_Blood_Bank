@@ -10,47 +10,48 @@ using json = nlohmann::ordered_json;
 void patient_details() {
 	json j_User = getUserdata();
 	
-	std::string id;
-	std::string fullname;
-	std::string hospitalname;
-	std::string address;
-	std::string email;
-	std::string contactnumber;
+	string id;
+	string fullname;
+	string hospitalname;
+	string address;
+	string email;
+	string contactnumber;
 
-	std::cout << "   RECIPIENT'S REGISTRATION" << '\n';
-	std::cout << "------------------------------" << '\n' << '\n';
+	cout << endl << colors::bright_red << "      RECIPIENT'S REGISTRATION" << colors::reset << endl;
+	cout << colors::bright_grey << " Please fill in the following questions" << colors::reset << endl;
+	cout << colors::red << "----------------------------------------" << colors::reset << endl;
 
-	std::cout << "Type your full name: ";
-	getline(std::cin, fullname);
+	cout << colors::white << "Full Name: " << colors::green;
+	getline(cin, fullname);
 
-	std::cout << "What is the name of the Hospital or Blood Bank? ";
-	getline(std::cin, hospitalname);
+	cout << colors::white << "Blood Bank or Hospital's name: " << colors::green;
+	getline(cin, hospitalname);
 
-	std::cout << "Type your physical address: ";
-	getline(std::cin, address);
+	cout << colors::white << "Physical Address: " << colors::green;
+	getline(cin, address);
 
-	std::cout << "Type your email address: ";
-	getline(std::cin, email);
+	cout << colors::white << "Email Address: " << colors::green;
+	getline(cin, email);
 
-	std::cout << "Type your contact number: ";
-	getline(std::cin, contactnumber);
+	cout << colors::white << "Contact Number: " << colors::green;
+	getline(cin, contactnumber);
 
 	id = fullname;
-	std::replace(id.begin(), id.end(), ' ', '_');
+	replace(id.begin(), id.end(), ' ', '_');
 
 	j_User["Recipiants"][id]["User_Info"] = { {"Full name", fullname},{"Hospital/Bloodbank", hospitalname}, {"Adress", address}, {"Email", email}, {"Contact_no", contactnumber} };
 
 	system("cls");
 
-	std::cout << '\n';
-	std::cout << "Full name: " << fullname << '\n';
-	std::cout << "Hospital or Blood Bank: " << hospitalname << '\n';
-	std::cout << "Physical address: " << address << '\n';
-	std::cout << "Email: " << email << '\n';
-	std::cout << "Contact Number: " << contactnumber << '\n' << '\n';
+	cout << '\n';
+	cout << colors::bright_grey << "Full Name: " << fullname << '\n';
+	cout << colors::bright_grey << "Hospital or Blood Bank: " << hospitalname << '\n';
+	cout << colors::bright_grey << "Physical address: " << address << '\n';
+	cout << colors::bright_grey << "Email: " << email << '\n';
+	cout << colors::bright_grey << "Contact Number: " << contactnumber << '\n' << '\n';
 
-	std::cout << '\n';
-	std::cout << "Your registration is valid to access blood! Please continue to the booking process!" << '\n';
+	cout << '\n';
+	cout << "Your registration is valid to access blood! Please continue to the booking process!" << '\n';
 	updateJson(j_User, "user_data.json");
 	system("pause");
 
