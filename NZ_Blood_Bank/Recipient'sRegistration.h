@@ -17,6 +17,7 @@ void patient_details() {
 	string email;
 	string contactnumber;
 
+	cout << endl << colors::bright_red << "[!] " << colors::bright_grey << "You chose receive." << colors::reset << endl;
 	cout << endl << colors::bright_red << "      RECIPIENT'S REGISTRATION" << colors::reset << endl;
 	cout << colors::bright_grey << " Please fill in the following questions" << colors::reset << endl;
 	cout << colors::red << "----------------------------------------" << colors::reset << endl;
@@ -43,15 +44,14 @@ void patient_details() {
 
 	system("cls");
 
-	cout << '\n';
-	cout << colors::bright_grey << "Full Name: " << fullname << '\n';
-	cout << colors::bright_grey << "Hospital or Blood Bank: " << hospitalname << '\n';
-	cout << colors::bright_grey << "Physical address: " << address << '\n';
-	cout << colors::bright_grey << "Email: " << email << '\n';
-	cout << colors::bright_grey << "Contact Number: " << contactnumber << '\n' << '\n';
+	cout << endl;
+	cout << colors::white << "Full Name: " << colors::green << fullname << colors::reset << endl;
+	cout << colors::white << "Hospital or Blood Bank: " << colors::green << hospitalname << colors::reset << endl;
+	cout << colors::white << "Physical address: " << colors::green << address << colors::reset << endl;
+	cout << colors::white << "Email: " << colors::green << email << colors::reset << endl;
+	cout << colors::white << "Contact Number: " << colors::green << contactnumber << colors::reset << endl;
 
-	cout << '\n';
-	cout << "Your registration is valid to access blood! Please continue to the booking process!" << '\n';
+	cout << endl << colors::bright_red << "[!] " << colors::bright_grey << "Your registration is valid to access blood! Please continue to the booking process!" << colors::reset << endl;
 	updateJson(j_User, "user_data.json");
 	system("pause");
 

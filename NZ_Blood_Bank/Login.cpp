@@ -62,7 +62,7 @@ string LogIn() {
 	json Doc = json::parse(in);
 
 	string username;
-	cout << colors::bright_red << "[!] " << colors::bright_grey << "You choosed Login." << colors::reset << endl;
+	cout << colors::bright_red << "[!] " << colors::bright_grey << "You chose login." << colors::reset << endl;
 	cout << colors::white << "Username: " << colors::green;
 
 	cin >> username;

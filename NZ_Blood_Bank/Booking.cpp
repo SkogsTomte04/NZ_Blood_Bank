@@ -22,10 +22,12 @@ vector<int> getAvailableHours(json j, string day) {
 int getTime(json j, string day) { // user picks time of day
 	int userinput;
 	vector<int> Available_H = getAvailableHours(j, day);
+	cout << colors::bright_red << "\n[!] " << colors::bright_grey << "You chose " << colors::reset << endl;
+	cout << colors::bright_grey << "Pick a time of day from (1 - " << size(Available_H) << "): " << colors::reset << endl;
 	for (int i = 0; i < size(Available_H); i++) {
-		cout << i + 1 << ". (" << Available_H[i] << ":00)" << endl;
+		cout << colors::white << i + 1 << ". (" << colors::yellow << Available_H[i] << ":00" << colors::white << ")" << colors::reset << endl;
 	}
-	cout << "Pick a time of day (1 - " << size(Available_H) << "): ";
+	cout << colors::white << "\nAnswer: " << colors::green;
 	cin >> userinput;
 	system("cls");
 	return Available_H[userinput - 1];
@@ -34,10 +36,12 @@ int getTime(json j, string day) { // user picks time of day
 string getDay() { // user picks day
 	int userinput;
 	
+	cout << colors::bright_red << "\n[!] " << colors::bright_grey << "You chose change date." << colors::reset << endl;
+	cout << colors::bright_grey << "Pick a day to donate from (1-5)" << endl;
 	for (int i = 1; i <= size(weekdays); i++) {
-		cout << i << ". " << weekdays[i - 1] << endl;
+		cout << colors::white << i << ". " << colors::yellow << weekdays[i - 1] << endl;
 	}
-	cout << "Pick a day to Donate" << endl;
+	cout << colors::white << "\nAnswer: " << colors::green;
 	cin >> userinput;
 	system("cls");
 	return weekdays[userinput - 1];
@@ -69,7 +73,13 @@ void BookAppointment(string user) { // Gives user object both day of and time of
 		time = j_Userdata["Donators"][user]["Appointment_Date"]["Time"];
 		day = j_Userdata["Donators"][user]["Appointment_Date"]["Day"];
 
-		cout << "You already have a booked day!\n\n1. Change date\n2. Unbook\n3. Back to home" << endl;
+		cout << colors::red << "\n/!\\ " << colors::white << "Error: You already have a booked day!" << colors::reset << endl;
+		cout << endl;
+		cout << colors::bright_grey << "Enter your answer from (1-3): " << colors::reset << endl;
+		cout << colors::white << "1. Change date" << colors::reset << endl;
+		cout << colors::white << "2. Unbook" << colors::reset << endl;
+		cout << colors::white << "3. Back to home" << colors::reset << endl;
+		cout << colors::white << "\nAnswer: " << colors::green;
 		cin >> userinput;
 
 		if (userinput == 1) {

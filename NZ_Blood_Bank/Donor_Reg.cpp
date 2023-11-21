@@ -90,7 +90,7 @@ string getUsername(nlohmann::ordered_json j) {
 	bool isUnique = false;
 	string str;
 	while (!isUnique) {
-		cout << colors::bright_red << "\n[!] " << colors::bright_grey << "You choosed Donate." << colors::reset << endl;
+		cout << colors::bright_red << "\n[!] " << colors::bright_grey << "You chose donate." << colors::reset << endl;
 		cout << colors::bright_grey << "Enter a Username:" << colors::reset << endl;
 		cout << colors::white << "\nAnswer: " << colors::green;
 		cin >> str;

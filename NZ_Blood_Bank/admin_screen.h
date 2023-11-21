@@ -108,7 +108,7 @@ int printMenu(int screen) { // this is horrible why did i do this???
 
         break;
     case 2:
-        cout << colors::bright_red << "\n[!] " << colors::bright_grey << "You choosed View Information/Update." << colors::reset << endl;
+        cout << colors::bright_red << "\n[!] " << colors::bright_grey << "You chose view information/update." << colors::reset << endl;
         cout << colors::bright_grey << "Enter your answer from (1-2): " << colors::reset << endl;
         cout << colors::white << "1. Recipient Information" << colors::reset << endl;
         cout << colors::white << "2. Donator Information" << colors::reset << endl;
@@ -116,7 +116,7 @@ int printMenu(int screen) { // this is horrible why did i do this???
         cout << colors::white << "\nAnswer: " << colors::green;
         break;
     case 3:
-        cout << colors::bright_red << "\n[!] " << colors::bright_grey << "You choosed Update Reports." << colors::reset << endl;
+        cout << colors::bright_red << "\n[!] " << colors::bright_grey << "You chose update reports." << colors::reset << endl;
         cout << colors::bright_grey << "Input the donators's name to update the blood testing report." << colors::reset << endl;
         cout << colors::white << "\nAnswer: " << colors::green;
         return 0;
