@@ -51,11 +51,11 @@ std::vector <string> getVector(string category) {
 	string str;
 
 	while (true) {
-		cout << category << ":" << endl;
+		cout << endl << colors::bright_red << category << colors::reset << endl;
 		for (int i = 0; i < size(vec); i++) {
 			cout << vec[i] << endl;
 		}
-		str = getString("Enter a medical condition \nor enter \"none\" if you have no more to add");
+		str = getString("medical condition,\nor \"none\" if you don't have anything more to say");
 		cout << endl;
 		if (str != "none") {
 			vec.push_back(str);
@@ -90,7 +90,7 @@ string getUsername(nlohmann::ordered_json j) {
 	bool isUnique = false;
 	string str;
 	while (!isUnique) {
-		cout << colors::bright_red << "\n[!] " << colors::bright_grey << "You choosed Donate." << colors::reset << endl;
+		cout << colors::bright_red << "\n[!] " << colors::bright_grey << "You chose donate." << colors::reset << endl;
 		cout << colors::bright_grey << "Enter a Username:" << colors::reset << endl;
 		cout << colors::white << "\nAnswer: " << colors::green;
 		cin >> str;
@@ -114,17 +114,17 @@ void Register() {
 
 	userStruct.username = getUsername(Doc);
 	userStruct.password = getString("Password");
-	userStruct.firstName = getString("First name");
-	userStruct.lastName = getString("Last name");
+	userStruct.firstName = getString("First Name");
+	userStruct.lastName = getString("Last Name");
 	userStruct.DOB = getDate("Date of Birth");
 	userStruct.nationality = getString("Nationality");
 	userStruct.ethnicity = getString("Ethnicity");
-	userStruct.medical = getVector("Medical record");
+	userStruct.medical = getVector("Medical Record");
 	userStruct.bloodGroup = getString("Blood Group");
 	userStruct.contact = getString("Contact Number");
 	userStruct.email = getString("Email");
 	userStruct.adress = getString("Adress");
-	userStruct.prev_donation = getDate("Previous Donation date (fill out with \"0\" if no previous date)");
+	userStruct.prev_donation = getDate("Previous Donation Date (Enter \"0\" if there is no previous date)");
 	
 
 	Doc["Donators"][userStruct.username] = {
