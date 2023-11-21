@@ -1,5 +1,5 @@
 #include "Booking.h"
-#include "jsonManager.h"
+
 
 using json = nlohmann::ordered_json;
 using namespace std;
@@ -69,7 +69,9 @@ void BookAppointment(string user) { // Gives user object both day of and time of
 		time = j_Userdata["Donators"][user]["Appointment_Date"]["Time"];
 		day = j_Userdata["Donators"][user]["Appointment_Date"]["Day"];
 
-		cout << "You already have a booked day!\n\n1. Change date\n2. Unbook\n3. Back to home" << endl;
+		cout << "You already have a booked day!" << endl;
+		printuserSchedule(j_Userdata, user, "Donators");
+		cout << "\n\n1.Change date\n2.Unbook\n3.Back to home" << endl;
 		cin >> userinput;
 
 		if (userinput == 1) {
@@ -83,7 +85,7 @@ void BookAppointment(string user) { // Gives user object both day of and time of
 		}
 		if (userinput == 2) {
 			j_Schedule["Days"][day][to_string(time)] = "Available";
-			j_Schedule["Clients"].erase(j_Schedule["Clients"].find(user));
+			j_Schedule["Clients"]["Donation"].erase(j_Schedule["Clients"]["Donation"].find(user));
 			j_Userdata = updateUserdate(j_Userdata, "n/a", 0, user);
 		}
 		if (userinput == 3) {

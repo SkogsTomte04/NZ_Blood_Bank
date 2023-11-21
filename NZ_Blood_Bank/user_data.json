@@ -7,8 +7,8 @@
     "Donators": {
         "1": {
             "Appointment_Date": {
-                "Day": "Wednesday",
-                "Time": 11
+                "Day": "n/a",
+                "Time": 0
             },
             "User_Info": {
                 "Adress": "1",
@@ -27,8 +27,8 @@
         },
         "ASwellDude": {
             "Appointment_Date": {
-                "Day": "Thursday",
-                "Time": 10
+                "Day": "n/a",
+                "Time": 0
             },
             "User_Info": {
                 "Adress": "244 Sunset road",

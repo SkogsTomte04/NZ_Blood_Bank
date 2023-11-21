@@ -3,6 +3,21 @@
 using namespace std;
 using json = nlohmann::ordered_json;
 
+void printuserSchedule(json j, string username, string type) {
+    std::cout << colors::yellow << " [" << colors::reset;
+    std::cout << colors::white << "Booked Date" << colors::reset;
+    std::cout << colors::yellow << "]" << colors::reset << endl;
+    for (auto it = j[type][username]["Appointment_Date"].begin(); it != j[type][username]["Appointment_Date"].end(); it++) {
+        if (it.value().is_string()) { // check if iterator value is a string
+            string tempStr = it.value(); // assign string to temporary variable 
+            std::cout << " | | " << colors::yellow << it.key() << ": " << colors::bright_grey << tempStr << colors::reset << endl; // print value and key
+        }
+        else { // if value is not string: print out value without temporary variable
+            std::cout << " | | " << colors::yellow << it.key() << ": " << colors::bright_grey << it.value() << colors::reset << endl;
+        }
+    }
+}
+
 void printuserInfo(json j, string username, string type) {
     std::cout << colors::yellow << " [" << colors::reset;
     std::cout << colors::white << "User info" << colors::reset;
@@ -26,18 +41,9 @@ void printUser(json j, string username, string type) { // might want to denest t
     std::cout << colors::green << " ]" << colors::reset << endl;
 
     printuserInfo(j, username, type);
-    //for (auto it = j[type][username].begin(); it != j[type][username].end(); it++) {
-    //    std::cout << " | " << colors::bright_red << it.key() << colors::reset << endl;
-    //    for (auto it2 = j[type][username][it.key()].begin(); it2 != j[type][username][it.key()].end(); ++it2) {
-    //        if (it2.value().is_string()) { // check if iterator value is a string
-    //            tempStr = it2.value(); // assign string to temporary variable 
-    //            std::cout << " | | " << colors::yellow << it2.key() << ": " << colors::bright_grey << tempStr << colors::reset << endl; // print value and key
-    //        }
-    //        else { // if value is not string: print out value without temporary variable
-    //            std::cout << " | | " << colors::yellow << it2.key() << ": " << colors::bright_grey << it2.value() << colors::reset << endl;
-    //        }
-    //    }
-    //}
+    if (j[type][username].contains("Appointment_Date")) {
+        printuserSchedule(j, username, type);
+    }
     std::cout << endl;
 }
 

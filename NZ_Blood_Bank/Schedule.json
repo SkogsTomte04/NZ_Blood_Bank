@@ -11,7 +11,7 @@
             "16": "Available"
         },
         "Tuesday": {
-            "9": "Available",
+            "9": "1",
             "10": "Miltonios",
             "11": "Available",
             "12": "Available",
@@ -23,7 +23,7 @@
         "Wednesday": {
             "9": "Available",
             "10": "Available",
-            "11": "1",
+            "11": "Available",
             "12": "Available",
             "13": "Lopton",
             "14": "Available",
@@ -32,7 +32,7 @@
         },
         "Thursday": {
             "9": "Available",
-            "10": "ASwellDude",
+            "10": "Available",
             "11": "Available",
             "12": "Available",
             "13": "Available",
@@ -49,18 +49,13 @@
             "14": "Available",
             "15": "Available",
             "16": "Available"
+        },
+        "n/a": {
+            "0": "Available"
         }
     },
     "Clients": {
         "Donation": {
-            "1": {
-                "Day": "Wednesday",
-                "Time": "11"
-            },
-            "ASwellDude": {
-                "Day": "Thursday",
-                "Time": "10"
-            },
             "Lopton": {
                 "Day": "Wednesday",
                 "Time": "13"

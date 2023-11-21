@@ -4,6 +4,7 @@
 #include <string>
 #include <array>
 #include <vector>
+#include "jsonManager.h"
 #include "json.hpp"
 
 nlohmann::json NewDate(nlohmann::json, std::string, std::string, std::string);
