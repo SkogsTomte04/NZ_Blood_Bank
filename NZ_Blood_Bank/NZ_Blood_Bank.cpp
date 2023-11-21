@@ -60,8 +60,6 @@ int main()
         while (loggedIn && !isAdmin) { // does this if user is logged in
             system("cls");
             int userinput;
-
-            cout << colors::bright_red << "[!] " << colors::bright_grey << "Login successful." << colors::reset << endl;
             
             printUser(getUserdata(), activeUser, "Donators");
 

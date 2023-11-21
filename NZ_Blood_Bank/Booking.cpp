@@ -73,8 +73,6 @@ void BookAppointment(string user) { // Gives user object both day of and time of
 		time = j_Userdata["Donators"][user]["Appointment_Date"]["Time"];
 		day = j_Userdata["Donators"][user]["Appointment_Date"]["Day"];
 
-		cout << colors::red << "\n/!\\ " << colors::white << "Error: You already have a booked day!" << colors::reset << endl;
-		cout << endl;
 		cout << colors::bright_grey << "Enter your answer from (1-3): " << colors::reset << endl;
 		cout << colors::white << "1. Change date" << colors::reset << endl;
 		cout << colors::white << "2. Unbook" << colors::reset << endl;
