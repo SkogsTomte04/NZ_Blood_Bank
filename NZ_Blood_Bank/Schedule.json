@@ -7,7 +7,7 @@
             "12": "NewUser",
             "13": "Available",
             "14": "Aldin",
-            "15": "Available",
+            "15": "1",
             "16": "Available"
         },
         "Tuesday": {
@@ -71,6 +71,10 @@
             "Aldin": {
                 "Day": "Monday",
                 "Time": "14"
+            },
+            "1": {
+                "Day": "Monday",
+                "Time": "15"
             }
         }
     }

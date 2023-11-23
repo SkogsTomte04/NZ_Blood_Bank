@@ -4,6 +4,7 @@
 #include <string>
 #include <array>
 #include <vector>
+#include "InputManager.h"
 #include "jsonManager.h"
 #include "json.hpp"
 

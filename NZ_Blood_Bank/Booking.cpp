@@ -28,7 +28,7 @@ int getTime(json j, string day) { // user picks time of day
 		cout << colors::white << i + 1 << ". (" << colors::yellow << Available_H[i] << ":00" << colors::white << ")" << colors::reset << endl;
 	}
 	cout << colors::white << "\nAnswer: " << colors::green;
-	cin >> userinput;
+	userinput = getInt();
 	system("cls");
 	return Available_H[userinput - 1];
 }
@@ -42,7 +42,7 @@ string getDay() { // user picks day
 		cout << colors::white << i << ". " << colors::yellow << weekdays[i - 1] << endl;
 	}
 	cout << colors::white << "\nAnswer: " << colors::green;
-	cin >> userinput;
+	userinput = getInt();
 	system("cls");
 	return weekdays[userinput - 1];
 }
@@ -81,7 +81,7 @@ void BookAppointment(string user) { // Gives user object both day of and time of
 		cout << "You already have a booked day!" << endl;
 		printuserSchedule(j_Userdata, user, "Donators");
 		cout << "\n\n1.Change date\n2.Unbook\n3.Back to home" << endl;
-		cin >> userinput;
+		userinput = getInt();
 
 		if (userinput == 1) {
 			j_Schedule["Days"][day][to_string(time)] = "Available";

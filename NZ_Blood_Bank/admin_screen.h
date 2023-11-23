@@ -3,6 +3,7 @@
 #include <fstream>
 #include <string>
 #include "jsonManager.h"
+#include "InputManager.h"
 #include "colors.hpp"
 
 using namespace std;
@@ -98,7 +99,7 @@ void printAllUsers(json j, string type) { // prints all users of type "Donators"
         printUser(j, it.key(), type);
     }
     cout << "1. Search for a user\n2. Quit" << endl;
-    cin >> userinput;
+    userinput = getInt();
 
     switch (userinput) {
     case 1:
@@ -145,7 +146,7 @@ int printMenu(int screen) { // this is horrible why did i do this???
         cout << colors::white << "\nAnswer: " << colors::green;
         return 0;
     }
-    std::cin >> userInput;
+    userInput = getInt();
     return userInput;
 }
 

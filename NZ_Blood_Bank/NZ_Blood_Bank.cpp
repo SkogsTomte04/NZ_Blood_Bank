@@ -46,7 +46,7 @@ int main()
                 cout << colors::white << "1. Donate" << colors::reset << endl;
                 cout << colors::white << "2. Receive" << colors::reset << endl;
                 cout << colors::white << "\nAnswer: " << colors::green;
-                cin >> userinput;
+                userinput = getInt();
                 cin.ignore();
                 if (userinput == 1) {
                     Register();
@@ -69,7 +69,7 @@ int main()
             cout << colors::white << "1. Book Appointment" << colors::reset << endl;
             cout << colors::white << "2. Log Out" << colors::reset << endl;
             cout << colors::white << "\nAnswer: " << colors::green;
-            cin >> userinput;
+            userinput = getInt();
             system("cls");
             if (userinput == 1) {
                 DScreen();
