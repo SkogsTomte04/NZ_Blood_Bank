@@ -4,56 +4,47 @@
 #include <fstream>
 #include "json.hpp"
 #include "jsonManager.h"
+#include "InputManager.h"
 
 using json = nlohmann::ordered_json;
 
-void patient_details() {
-	json j_User = getUserdata();
-	
+struct Recipiant {
 	string id;
 	string fullname;
 	string hospitalname;
 	string address;
 	string email;
 	string contactnumber;
+};
+
+void patient_details() {
+	json j_User = getUserdata();
+
+	Recipiant reci;
 
 	cout << endl << colors::bright_red << "[!] " << colors::bright_grey << "You chose receive." << colors::reset << endl;
 	cout << endl << colors::bright_red << "      RECIPIENT'S REGISTRATION" << colors::reset << endl;
 	cout << colors::bright_grey << " Please fill in the following questions" << colors::reset << endl;
 	cout << colors::red << "----------------------------------------" << colors::reset << endl;
 
-	cout << colors::white << "Full Name: " << colors::green;
-	getline(cin, fullname);
+	reci.fullname = getString("Full Name");
+	reci.hospitalname = getString("Blood Bank or Hospital's name");
+	reci.address = getString("Physical adress");
+	reci.email = getString("Email Address");
+	reci.contactnumber = getString("Contact Number");
 
-	cout << colors::white << "Blood Bank or Hospital's name: " << colors::green;
-	getline(cin, hospitalname);
+	reci.id = reci.fullname;
+	replace(reci.id.begin(), reci.id.end(), ' ', '_');
 
-	cout << colors::white << "Physical Address: " << colors::green;
-	getline(cin, address);
-
-	cout << colors::white << "Email Address: " << colors::green;
-	getline(cin, email);
-
-	cout << colors::white << "Contact Number: " << colors::green;
-	getline(cin, contactnumber);
-
-	id = fullname;
-	replace(id.begin(), id.end(), ' ', '_');
-
-	j_User["Recipiants"][id]["User_Info"] = { {"Full name", fullname},{"Hospital/Bloodbank", hospitalname}, {"Adress", address}, {"Email", email}, {"Contact_no", contactnumber} };
+	j_User["Recipiants"][reci.id]["User_Info"] = { {"Full name", reci.fullname},{"Hospital/Bloodbank", reci.hospitalname}, {"Adress", reci.address}, {"Email", reci.email}, {"Contact_no", reci.contactnumber} };
 
 	system("cls");
 
-	cout << endl;
-	cout << colors::white << "Full Name: " << colors::green << fullname << colors::reset << endl;
-	cout << colors::white << "Hospital or Blood Bank: " << colors::green << hospitalname << colors::reset << endl;
-	cout << colors::white << "Physical address: " << colors::green << address << colors::reset << endl;
-	cout << colors::white << "Email: " << colors::green << email << colors::reset << endl;
-	cout << colors::white << "Contact Number: " << colors::green << contactnumber << colors::reset << endl;
-
-	cout << endl << colors::bright_red << "[!] " << colors::bright_grey << "Your registration is valid to access blood! Please continue to the booking process!" << colors::reset << endl;
+	printUser(j_User, reci.id, "Recipiants");
 	updateJson(j_User, "user_data.json");
+	
+	cout << endl << colors::bright_red << "[!] " << colors::bright_grey << "Your registration is valid to access blood! Please continue to the booking process!" << colors::reset << endl;
+	
 	system("pause");
-
 	system("cls");
 }

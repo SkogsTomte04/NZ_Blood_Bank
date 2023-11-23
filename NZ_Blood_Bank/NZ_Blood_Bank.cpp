@@ -7,6 +7,7 @@
 #include "Recipient'sRegistration.h"
 #include "jsonManager.h"
 #include "admin_screen.h"
+#include "InputManager.h"
 
 
 int main()
@@ -20,7 +21,7 @@ int main()
             draw_intro();
 
             int userinput;
-            cin >> userinput;
+            userinput = getInt();
 
             if (userinput == 1) {
                 string loginStatus = LogIn();

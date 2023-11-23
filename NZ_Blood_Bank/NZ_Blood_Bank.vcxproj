@@ -129,6 +129,7 @@
   <ItemGroup>
     <ClCompile Include="Booking.cpp" />
     <ClCompile Include="Donor_Reg.cpp" />
+    <ClCompile Include="InputManager.cpp" />
     <ClCompile Include="jsonManager.cpp" />
     <ClCompile Include="Login.cpp" />
     <ClCompile Include="NZ_Blood_Bank.cpp" />
@@ -138,6 +139,7 @@
     <ClInclude Include="Booking.h" />
     <ClInclude Include="DonorsScreen.h" />
     <ClInclude Include="Donor_Reg.h" />
+    <ClInclude Include="InputManager.h" />
     <ClInclude Include="jsonManager.h" />
     <ClInclude Include="LogIn.h" />
   </ItemGroup>
