@@ -75,8 +75,5 @@
     <ClInclude Include="intro_screen.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="recipient_screen.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
   </ItemGroup>
 </Project>

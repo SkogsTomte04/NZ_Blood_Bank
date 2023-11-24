@@ -26,7 +26,6 @@ string getString(string category) {
 	cout << colors::bright_grey << "\nEnter a " << category << ": " << colors::reset << endl;
 	cout << colors::white << "\nAnswer: " << colors::green;
 
-	//cin.ignore();
 	getline(cin, str);
 
 	return str;

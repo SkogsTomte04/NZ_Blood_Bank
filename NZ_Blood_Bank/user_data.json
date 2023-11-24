@@ -5,270 +5,28 @@
         }
     },
     "Donators": {
-        "1": {
-            "Appointment_Date": {
-                "Day": "Monday",
-                "Time": 15
-            },
+        "WilleKille123": {
             "User_Info": {
-                "Adress": "1",
-                "Blood_Group": "O+",
-                "Contact_no": "1",
-                "Email": "1",
-                "Ethnicity": "1",
-                "First_Name": "1",
-                "Last_Name": "1",
-                "Med_Conditions": "1",
-                "Nationality": "1",
-                "Password": "1",
-                "Prev_Donation_Date": "1",
-                "dob": "1"
-            }
-        },
-        "ASwellDude": {
-            "Appointment_Date": {
-                "Day": "n/a",
-                "Time": 0
-            },
-            "User_Info": {
-                "Adress": "244 Sunset road",
+                "First_Name": "William",
+                "Last_Name": "Moller",
+                "DOB": [
+                    20,
+                    4,
+                    4
+                ],
+                "Nationality": "Swedish",
+                "Ethnicity": "Caucasian",
+                "Medical": [],
                 "Blood_Group": "A+",
                 "Contact_no": "0732306558",
                 "Email": "williammoller321@gmail.com",
-                "Ethnicity": "White",
-                "First_Name": "William",
-                "Last_Name": "Moller",
-                "Med_Conditions": "none",
-                "Nationality": "Swede",
-                "Password": "Bus05",
-                "Prev_Donation_Date": "never",
-                "dob": "040420"
-            }
-        },
-        "Lopton": {
-            "Appointment_Date": {
-                "Day": "Wednesday",
-                "Time": 13
-            },
-            "User_Info": {
-                "Adress": "armdogatan 42",
-                "Blood_Group": "A+",
-                "Contact_no": 732306558,
-                "DOB": {
-                    "DD": 20,
-                    "MM": 7,
-                    "YY": 22
-                },
-                "Email": "liptonlondob@gmail.com",
-                "Ethnicity": "hite",
-                "First_Name": "ip",
-                "Last_Name": "on",
-                "Nationality": "Swede",
-                "Password": "pass",
-                "Prev_Donation_Date": [
-                    5,
-                    6,
-                    14
-                ]
-            }
-        },
-        "Miltonios": {
-            "Appointment_Date": {
-                "Day": "Tuesday",
-                "Time": 10
-            },
-            "User_Info": {
-                "Adress": "244 Sunset Road",
-                "Blood_Group": "A+",
-                "Contact_no": "073356830",
-                "Email": "MilleKille321@gmail.com",
-                "Ethnicity": "Very white",
-                "First_Name": "Milton",
-                "Last_Name": "Leinonen",
-                "Med_Conditions": "P.D",
-                "Nationality": "Finn",
-                "Password": "MilleLille",
-                "Prev_Donation_Date": "66",
-                "dob": "idk"
-            }
-        },
-        "t": {
-            "Appointment_Date": {
-                "Day": "N/A",
-                "Time": 0
-            },
-            "User_Info": {
-                "Adress": "ttt",
-                "Blood_Group": "O-",
-                "Contact_no": 4567,
-                "DOB": {
-                    "DD": 0,
-                    "MM": 0,
-                    "YY": 0
-                },
-                "Email": "ttt",
-                "Ethnicity": "t",
-                "First_Name": "t",
-                "Last_Name": "t",
-                "Nationality": "Swede",
-                "Password": "",
-                "Prev_Donation_Date": [
-                    8,
-                    6,
-                    4
-                ]
-            }
-        },
-        "NewUser": {
-            "User_Info": {
-                "First_Name": "New",
-                "Last_Name": "User",
-                "DOB": {
-                    "DD": 20,
-                    "MM": 4,
-                    "YY": 4
-                },
-                "Nationality": "German",
-                "Ethnicity": "irellevant",
-                "Blood_Group": "A+",
-                "Contact_no": 732396558,
-                "Email": "NewUser@gmail.com",
-                "Adress": "USERADRESS",
+                "Adress": "244 sunset road",
                 "Prev_Donation_Date": [
                     0,
                     0,
                     0
                 ],
-                "Password": "1"
-            },
-            "Appointment_Date": {
-                "Day": "Monday",
-                "Time": 12
-            }
-        },
-        "NewTestUser": {
-            "User_Info": {
-                "First_Name": "User",
-                "Last_Name": "Test",
-                "DOB": [
-                    6,
-                    5,
-                    40
-                ],
-                "Nationality": "bla",
-                "Ethnicity": "lba",
-                "Medical": [
-                    "alergy",
-                    "blood poison",
-                    "lead poison"
-                ],
-                "Blood_Group": "O",
-                "Contact_no": "00004095245",
-                "Email": "WERGf@gmail.com",
-                "Adress": "243 SRSRE SV",
-                "Prev_Donation_Date": [
-                    0,
-                    0,
-                    0
-                ],
-                "Password": "test"
-            },
-            "Appointment_Date": {
-                "Day": "N/A",
-                "Time": 0
-            }
-        },
-        "0": {
-            "User_Info": {
-                "First_Name": "0",
-                "Last_Name": "0",
-                "DOB": [
-                    0,
-                    0,
-                    0
-                ],
-                "Nationality": "0",
-                "Ethnicity": "0",
-                "Medical": [],
-                "Blood_Group": "0",
-                "Contact_no": "0",
-                "Email": "0",
-                "Adress": "0",
-                "Prev_Donation_Date": [
-                    0,
-                    0,
-                    0
-                ],
-                "Password": "0"
-            },
-            "Appointment_Date": {
-                "Day": "N/A",
-                "Time": 0
-            }
-        },
-        "9": {
-            "User_Info": {
-                "First_Name": "0",
-                "Last_Name": "0",
-                "DOB": [
-                    0,
-                    0,
-                    0
-                ],
-                "Nationality": "0",
-                "Ethnicity": "0",
-                "Medical": [
-                    "0",
-                    "Hello",
-                    "Kekw",
-                    "Fuck",
-                    "Lol",
-                    "Bruh"
-                ],
-                "Blood_Group": "0",
-                "Contact_no": "0",
-                "Email": "0",
-                "Adress": "0",
-                "Prev_Donation_Date": [
-                    0,
-                    0,
-                    0
-                ],
-                "Password": "0"
-            },
-            "Appointment_Date": {
-                "Day": "N/A",
-                "Time": 0
-            }
-        },
-        "8": {
-            "User_Info": {
-                "First_Name": "8",
-                "Last_Name": "8",
-                "DOB": [
-                    8,
-                    8,
-                    8
-                ],
-                "Nationality": "8",
-                "Ethnicity": "8",
-                "Medical": [
-                    "8",
-                    "8",
-                    "8",
-                    "8",
-                    "8"
-                ],
-                "Blood_Group": "O+",
-                "Contact_no": "2452",
-                "Email": "wrg",
-                "Adress": "wrg",
-                "Prev_Donation_Date": [
-                    245234,
-                    25,
-                    5
-                ],
-                "Password": "8"
+                "Password": "BUU123"
             },
             "Appointment_Date": {
                 "Day": "N/A",
@@ -295,33 +53,6 @@
                 "Hospital/Bloodbank": "Swebank"
             }
         },
-        "________________________________": {
-            "User_Info": {
-                "Full name": "________________________________",
-                "Hospital/Bloodbank": "bank",
-                "Adress": "2444 auckland",
-                "Email": "blalb@gmail.com",
-                "Contact_no": "07348567"
-            }
-        },
-        "Bomba_clat_rasclat": {
-            "User_Info": {
-                "Full name": "Bomba clat rasclat",
-                "Hospital/Bloodbank": "tge",
-                "Adress": "wtg",
-                "Email": "gwt",
-                "Contact_no": "36546"
-            }
-        },
-        "Hatsune_Miku": {
-            "User_Info": {
-                "Full name": "Hatsune Miku",
-                "Hospital/Bloodbank": "VocaloidMD",
-                "Adress": "420 hidinginyourwifi",
-                "Email": "Hatsune.Miku@gsnail.nz.gov",
-                "Contact_no": "85603984567"
-            }
-        },
         "Jezner_Jeymz_Mapula_Leonidas": {
             "User_Info": {
                 "Full name": "Jezner Jeymz Mapula Leonidas",
@@ -329,78 +60,6 @@
                 "Adress": "Auckland",
                 "Email": "loltest@gmail.com",
                 "Contact_no": "096942069"
-            }
-        },
-        "": {
-            "User_Info": {
-                "Full name": "",
-                "Hospital/Bloodbank": "",
-                "Adress": "",
-                "Email": "",
-                "Contact_no": ""
-            }
-        },
-        "2": {
-            "User_Info": {
-                "Full name": "2",
-                "Hospital/Bloodbank": "2",
-                "Adress": "2",
-                "Email": "2",
-                "Contact_no": "2"
-            }
-        },
-        "Jezner": {
-            "User_Info": {
-                "Full name": "Jezner",
-                "Hospital/Bloodbank": "nz",
-                "Adress": "lol",
-                "Email": "@gmail.com",
-                "Contact_no": "09"
-            }
-        },
-        "Testuser": {
-            "User_Info": {
-                "Full name": "Testuser",
-                "Hospital/Bloodbank": "Bloodbanking",
-                "Adress": "550 oblock",
-                "Email": "gareogang'@gmail.com",
-                "Contact_no": "24-592874"
-            }
-        },
-        "4": {
-            "User_Info": {
-                "Full name": "4",
-                "Hospital/Bloodbank": "4",
-                "Adress": "4",
-                "Email": "4",
-                "Contact_no": "4"
-            }
-        },
-        "Bunkton_Binkton": {
-            "User_Info": {
-                "Full name": "Bunkton Binkton",
-                "Hospital/Bloodbank": "bankofBank",
-                "Adress": "GGGGG",
-                "Email": "",
-                "Contact_no": ""
-            }
-        },
-        "7": {
-            "User_Info": {
-                "Full name": "7",
-                "Hospital/Bloodbank": "7",
-                "Adress": "7",
-                "Email": "7",
-                "Contact_no": "7"
-            }
-        },
-        "9": {
-            "User_Info": {
-                "Full name": "9",
-                "Hospital/Bloodbank": "9",
-                "Adress": "9",
-                "Email": "9",
-                "Contact_no": "9"
             }
         }
     }
