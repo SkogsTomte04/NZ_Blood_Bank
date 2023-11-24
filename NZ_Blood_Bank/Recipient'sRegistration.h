@@ -17,7 +17,7 @@ struct Recipiant {
 	string contactnumber;
 };
 
-void patient_details() {
+void patient_details() { // creates a new recever
 	json j_User = getUserdata();
 
 	Recipiant reci;

@@ -3,7 +3,7 @@
 using namespace std;
 using json = nlohmann::ordered_json;
 
-int getInt() {
+int getInt() { // validates then returns a userinput of type "int"
 	int input = 0;
 	bool valid = false;
 	do {
@@ -31,7 +31,7 @@ string getString(string category) {
 	return str;
 }
 
-std::vector <string> getVector(string category) {
+std::vector <string> getVector(string category) { // returns vector with users medical conditions
 	vector<string> vec;
 	string str;
 
@@ -55,7 +55,7 @@ std::vector <string> getVector(string category) {
 	return vec;
 }
 
-std::array <int, 3> getDate(string category) {
+std::array <int, 3> getDate(string category) { // returns an array with values dd/mm/yy
 	string dmy[3] = { "Day (DD)", "Month (MM)", "Year (YY)" };
 	array <int, 3> date;
 
@@ -71,7 +71,7 @@ std::array <int, 3> getDate(string category) {
 	return date;
 }
 
-string getUsername(nlohmann::ordered_json j) {
+string getUsername(nlohmann::ordered_json j) { // returns a unique usename for user
 	bool isUnique = false;
 	string str;
 	while (!isUnique) {

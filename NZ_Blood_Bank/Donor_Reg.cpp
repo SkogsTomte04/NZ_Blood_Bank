@@ -25,8 +25,6 @@ struct User
 };
 
 void Register() {
-	/*ifstream in("user_data.json");
-	auto Doc = nlohmann::ordered_json::parse(in);*/ //creates a json object 
 	json Doc = getUserdata();
 
 	User userStruct;
@@ -50,11 +48,7 @@ void Register() {
 		{"User_Info", {
 			{"First_Name", userStruct.firstName},
 			{"Last_Name", userStruct.lastName},
-			{"DOB", userStruct.DOB/*{
-				{"DD", userStruct.DOB[0]},
-				{"MM", userStruct.DOB[1]},
-				{"YY", userStruct.DOB[2]}
-			}*/},
+			{"DOB", userStruct.DOB},
 			{"Nationality", userStruct.nationality},
 			{"Ethnicity", userStruct.ethnicity},
 			{"Medical", userStruct.medical},
